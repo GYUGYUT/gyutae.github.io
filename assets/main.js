@@ -1,6 +1,13 @@
 const STORAGE_KEY = "portfolio.theme";
 
 function getPreferredTheme() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === "light" || saved === "dark") return saved;
+
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+
   return "light";
 }
 
@@ -13,10 +20,21 @@ function wireThemeToggle() {
   const btn = document.getElementById("themeToggle");
   if (!btn) return;
 
+  const sync = () => {
+    const current = document.documentElement.dataset.theme || "light";
+    const next = current === "dark" ? "light" : "dark";
+    btn.setAttribute("aria-pressed", String(current === "dark"));
+    btn.setAttribute("aria-label", `Switch to ${next} mode`);
+    btn.title = `Switch to ${next} mode`;
+  };
+
   btn.addEventListener("click", () => {
-    const current = document.documentElement.dataset.theme || "dark";
+    const current = document.documentElement.dataset.theme || "light";
     setTheme(current === "dark" ? "light" : "dark");
+    sync();
   });
+
+  sync();
 }
 
 function wireMailtoComposer() {
@@ -54,12 +72,8 @@ function setLastUpdated() {
   el.textContent = `${y}-${m}-${day}`;
 }
 
-// Force light theme to ensure a white-based background.
-try {
-  localStorage.removeItem(STORAGE_KEY);
-} catch {}
 setTheme(getPreferredTheme());
 wireThemeToggle();
+wireMailtoComposer();
 setYear();
 setLastUpdated();
-
