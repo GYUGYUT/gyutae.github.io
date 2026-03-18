@@ -265,26 +265,23 @@ a:hover {
 }
 
 .hero-meta {
+  margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 6px;
 }
 
 .meta-item {
-  padding: 12px 12px;
-  border-radius: var(--radius);
-  background: var(--panel2);
-  border: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
 }
 
 .meta-label {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .meta-value {
-  margin-top: 4px;
   font-size: 13px;
   font-weight: 700;
 }
@@ -306,7 +303,8 @@ a:hover {
 }
 
 .avatar {
-  width: 100%;
+  width: 80%;
+  max-width: 220px;
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   object-fit: cover;
