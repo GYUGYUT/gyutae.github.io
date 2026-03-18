@@ -429,10 +429,11 @@ textarea:focus {
 
 .hero-title {
   margin: 0;
-  max-width: 12ch;
+  max-width: 14ch;
   font-size: clamp(42px, 6vw, 76px);
   line-height: 0.95;
   letter-spacing: -0.06em;
+  text-wrap: balance;
 }
 
 .gradient {
@@ -765,7 +766,7 @@ textarea {
   }
 
   .hero-title {
-    max-width: 13ch;
+    max-width: 15ch;
   }
 }
 
