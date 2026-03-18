@@ -205,14 +205,14 @@ a:hover {
 }
 
 .hero {
-  padding: 58px 0 30px;
+  padding: 40px 0 24px;
 }
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 28px;
-  align-items: start;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 20px;
+  align-items: center;
 }
 
 .kicker {
@@ -265,14 +265,15 @@ a:hover {
 }
 
 .hero-meta {
-  margin-top: 16px;
+  margin-top: 14px;
   display: grid;
-  gap: 6px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
 }
 
 .meta-item {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 .meta-label {
@@ -399,7 +400,7 @@ a:hover {
 }
 
 .section {
-  padding: 44px 0;
+  padding: 36px 0;
 }
 
 .section.alt {
@@ -429,7 +430,7 @@ a:hover {
 
 .grid {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .grid.two {
@@ -468,7 +469,7 @@ a:hover {
 
 .projects {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .project-top {
