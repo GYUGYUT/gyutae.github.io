@@ -3,9 +3,7 @@ const STORAGE_KEY = "portfolio.theme";
 function getPreferredTheme() {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved === "dark" || saved === "light") return saved;
-  return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
+  return "light";
 }
 
 function setTheme(theme) {
@@ -50,6 +48,5 @@ function setYear() {
 
 setTheme(getPreferredTheme());
 wireThemeToggle();
-wireMailtoComposer();
 setYear();
 
