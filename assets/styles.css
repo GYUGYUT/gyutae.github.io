@@ -243,6 +243,20 @@ a:hover {
   max-width: 62ch;
 }
 
+.focus {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel2);
+}
+
+.focus-title {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
