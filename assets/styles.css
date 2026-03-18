@@ -325,7 +325,7 @@ a:hover {
 .profile-caption {
   margin-top: 12px;
   display: grid;
-  gap: 2px;
+  gap: 3px;
 }
 
 .profile-links {
@@ -338,6 +338,20 @@ a:hover {
 .profile-name {
   font-weight: 900;
   letter-spacing: -0.02em;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.profile-email a {
+  text-decoration: none;
+}
+
+.profile-email a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .profile-role {
