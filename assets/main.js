@@ -1,8 +1,6 @@
 const STORAGE_KEY = "portfolio.theme";
 
 function getPreferredTheme() {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === "dark" || saved === "light") return saved;
   return "light";
 }
 
@@ -56,6 +54,10 @@ function setLastUpdated() {
   el.textContent = `${y}-${m}-${day}`;
 }
 
+// Force light theme to ensure a white-based background.
+try {
+  localStorage.removeItem(STORAGE_KEY);
+} catch {}
 setTheme(getPreferredTheme());
 wireThemeToggle();
 setYear();
