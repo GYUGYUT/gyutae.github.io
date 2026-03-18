@@ -46,7 +46,18 @@ function setYear() {
   year.textContent = String(new Date().getFullYear());
 }
 
+function setLastUpdated() {
+  const el = document.getElementById("lastUpdated");
+  if (!el) return;
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  el.textContent = `${y}-${m}-${day}`;
+}
+
 setTheme(getPreferredTheme());
 wireThemeToggle();
 setYear();
+setLastUpdated();
 
