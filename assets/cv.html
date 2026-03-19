@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gyutae Oh | Curriculum Vitae</title>
+    <meta
+      name="description"
+      content="Curriculum Vitae of Gyutae Oh, AI graduate researcher at Sungkyunkwan University."
+    />
+    <style>
+      :root {
+        --page: #f6f1e8;
+        --paper: #fffdfa;
+        --ink: #1a2530;
+        --muted: #5f6e7b;
+        --line: #d6cec1;
+        --strong: #1f6f66;
+        --accent: #cb944f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Pretendard", "SUIT", "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(31, 111, 102, 0.1), transparent 24%),
+          linear-gradient(180deg, rgba(203, 148, 79, 0.08), transparent 18%),
+          var(--page);
+        line-height: 1.45;
+      }
+
+      .page {
+        width: min(960px, calc(100% - 32px));
+        margin: 24px auto;
+        padding: 36px 40px 44px;
+        background: var(--paper);
+        border: 1px solid rgba(26, 37, 48, 0.08);
+        box-shadow: 0 20px 60px rgba(26, 37, 48, 0.1);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 34px;
+        letter-spacing: -0.05em;
+      }
+
+      .headline {
+        margin-top: 8px;
+        color: var(--strong);
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .contact {
+        text-align: right;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .summary {
+        margin: 18px 0 10px;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      .summary strong {
+        color: var(--strong);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 30px;
+        margin-top: 18px;
+      }
+
+      section {
+        margin-top: 22px;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--strong);
+      }
+
+      .rule {
+        height: 1px;
+        background: var(--line);
+        margin-bottom: 12px;
+      }
+
+      .item {
+        margin-top: 0;
+        padding: 0 0 12px;
+      }
+
+      .item + .item {
+        border-top: 1px solid rgba(214, 206, 193, 0.7);
+        padding-top: 12px;
+      }
+
+      .row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .title {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .date {
+        white-space: nowrap;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .meta,
+      .desc,
+      .list,
+      .small {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .list {
+        margin: 6px 0 0;
+        padding-left: 18px;
+      }
+
+      .list li + li {
+        margin-top: 4px;
+      }
+
+      .compact {
+        display: grid;
+        gap: 10px;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .badge {
+        padding: 4px 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--muted);
+        background: rgba(31, 111, 102, 0.04);
+      }
+
+      .pub-title {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .pub-authors {
+        margin-top: 4px;
+        font-size: 12px;
+      }
+
+      .pub-venue {
+        margin-top: 3px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .links {
+        margin-top: 6px;
+        font-size: 12px;
+      }
+
+      .links a {
+        color: var(--strong);
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      .foot {
+        margin-top: 20px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          width: auto;
+          margin: 0;
+          padding: 24px 28px 30px;
+          border: 0;
+          box-shadow: none;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          padding: 24px 20px 28px;
+        }
+
+        .topbar,
+        .row,
+        .grid {
+          display: block;
+        }
+
+        .contact {
+          margin-top: 12px;
+          text-align: left;
+        }
+
+        .date {
+          margin-top: 4px;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div>
+          <h1>Gyutae Oh</h1>
+          <div class="headline">Curriculum Vitae</div>
+        </div>
+        <div class="contact">
+          <div>Media System Lab (MSL), Sungkyunkwan University</div>
+          <div>Electrical and Computer Engineering</div>
+          <div><a href="mailto:alswo740012@g.skku.edu">alswo740012@g.skku.edu</a></div>
+          <div><a href="https://scholar.google.com/citations?user=2_rG1kQAAAAJ&hl=en">Google Scholar</a></div>
+          <div><a href="https://github.com/GYUGYUT">github.com/GYUGYUT</a></div>
+          <div><a href="https://www.linkedin.com/in/%EA%B7%9C%ED%83%9C-%EC%98%A4-6754022b0">LinkedIn</a></div>
+        </div>
+      </header>
+
+      <p class="summary">
+        AI graduate researcher focused on <strong>efficient learning</strong>, <strong>continual learning</strong>,
+        <strong>anomaly detection</strong>, and <strong>medical image analysis</strong>. Currently pursuing a Ph.D. in
+        Electrical and Computer Engineering at Sungkyunkwan University under the supervision of Prof. Jitae Shin.
+      </p>
+
+      <div class="grid">
+        <div>
+          <section>
+            <h2>Education</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Sungkyunkwan University, Ph.D. in Electrical and Computer Engineering</div>
+                <div class="date">Feb 2026 – Present</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Sungkyunkwan University, M.S. in Electrical and Computer Engineering</div>
+                <div class="date">Feb 2024 – Feb 2026</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Korea National University of Transportation, B.S. in Computer Engineering</div>
+                <div class="date">Mar 2019 – Feb 2024</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Research Experience</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Media System Lab (MSL), Sungkyunkwan University</div>
+                <div class="date">Jan 2024 – Present</div>
+              </div>
+              <div class="meta">Advisor: Jitae Shin</div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Applied Machine Intelligence Lab (AMI-Lab), KNUT</div>
+                <div class="date">Mar 2022 – Jun 2023</div>
+              </div>
+              <div class="meta">Advisor: Jeonghwan Gwak</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Selected Publications</h2>
+            <div class="rule"></div>
+            <div class="compact">
+              <div class="item">
+                <div class="pub-title">
+                  Residual SODAP: Residual Self-Organizing Domain-Adaptive Prompting with Structural Knowledge
+                  Preservation for Continual Learning
+                </div>
+                <div class="pub-authors"><strong>Gyutae Oh</strong>, Jungwoo Bae, Jitae Shin</div>
+                <div class="pub-venue">arXiv preprint arXiv:2603.12816, 2026</div>
+                <div class="links">
+                  <a href="https://arxiv.org/abs/2603.12816">arXiv</a>
+                  <a href="https://arxiv.org/pdf/2603.12816.pdf">PDF</a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  UniPrompt-CL: Sustainable Continual Learning in Medical AI with Unified Prompt Pools
+                </div>
+                <div class="pub-authors"><strong>Gyutae Oh</strong>, Jitae Shin</div>
+                <div class="pub-venue">arXiv preprint arXiv:2508.10954, 2025</div>
+                <div class="links">
+                  <a href="https://arxiv.org/abs/2508.10954">arXiv</a>
+                  <a href="https://doi.org/10.48550/arXiv.2508.10954">DOI</a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy
+                </div>
+                <div class="pub-authors"><strong>G Oh</strong>, Y Won, D Lim, J Shin</div>
+                <div class="pub-venue">International Workshop on Ophthalmic Medical Image Analysis, 2025</div>
+                <div class="links">
+                  <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:eQOLeE2rZwMC">Scholar</a>
+                  <a href="https://github.com/GYUGYUT/Multimodal-Fusion-Framework-Using-Contrastive-Learning-for-Exposure-Keratopathy">Code</a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection
+                </div>
+                <div class="pub-authors"><strong>G Oh</strong>, J Shin</div>
+                <div class="pub-venue">IEEE International Conference on Consumer Electronics-Asia, 2024</div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG
+                </div>
+                <div class="pub-authors"><strong>G Oh</strong>, I Kim, B Kim, Y Jeon, J Gwak</div>
+                <div class="pub-venue">Proceedings of the Korean Society of Computer Information Conference, 2023</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Selected Projects</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Exposure Keratitis Diagnosis & Severity Prediction (Year 2)</div>
+                <div class="date">2025.10 – Present</div>
+              </div>
+              <div class="meta">Sungkyunkwan University · Kangbuk Samsung Hospital collaboration</div>
+              <div class="desc">
+                Extending multimodal medical AI research toward model compression and clinically practical deployment.
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="title">AI CHAMPION</div>
+                <div class="date">2025.07 – 2025.09</div>
+              </div>
+              <div class="desc">
+                Fundus-image-based multi-disease screening project with cross-lab and hospital collaboration; selected
+                as a Top 100 team out of approximately 500 teams.
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="title">Exposure Keratitis Diagnosis & Severity Prediction (Year 1)</div>
+                <div class="date">2024.10 – 2025.10</div>
+              </div>
+              <div class="desc">
+                Developed multimodal AI models for exposure keratitis diagnosis and severity prediction from anterior
+                segment photographs, leading to a workshop publication and a domestic patent application.
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <section>
+            <h2>Research Interests</h2>
+            <div class="rule"></div>
+            <div class="badge-row">
+              <span class="badge">Continual Learning</span>
+              <span class="badge">Efficient Learning</span>
+              <span class="badge">Anomaly Detection</span>
+              <span class="badge">Medical Image Analysis</span>
+              <span class="badge">PyTorch</span>
+              <span class="badge">Evaluation</span>
+            </div>
+          </section>
+
+          <section>
+            <h2>Honors & Awards</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="title">Silver Prize & Selected Works Prize, Hanium ICT Mentoring Program</div>
+              <div class="small">Companion Dog Eye Disease Detection Assistant App · Nov 2023</div>
+            </div>
+            <div class="item">
+              <div class="title">Graduation Project Award</div>
+              <div class="small">Companion Dog Eye Disease Detection Assistant App · Korea National University of Transportation · Aug 2023</div>
+            </div>
+            <div class="item">
+              <div class="title">Grand Prize & Bronze Prize, Hanium ICT Mentoring Program</div>
+              <div class="small">Automated Serving Robot using Object Detection & SLAM · Aug 2020</div>
+            </div>
+            <div class="item">
+              <div class="title">Grand Prize (President’s Award), Campus Contest</div>
+              <div class="small">Korea National University of Transportation · Sep 2020</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Scholarships</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="title">SKKU BK21 Fellowship (Specialized Scholarship)</div>
+              <div class="small">Sungkyunkwan University · 2024</div>
+            </div>
+            <div class="item">
+              <div class="title">University Innovation Merit & Living Expense Scholarship</div>
+              <div class="small">Sungkyunkwan University · 2024</div>
+            </div>
+            <div class="item">
+              <div class="title">Academic Excellence Scholarship, awarded five times</div>
+              <div class="small">Korea National University of Transportation · 2019–2023</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Patent</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="title">Device and Method for Diagnosing Exposure Keratopathy based on Multimodal Fusion Learning</div>
+              <div class="small">Application No. 10-2025-0121342 · Filed Aug 28, 2025</div>
+              <div class="desc">
+                Multimodal fusion framework for automatic grading of exposure keratopathy using four ocular imaging
+                modalities, with modality-agnostic inference from a single broadbeam image.
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Certification</h2>
+            <div class="rule"></div>
+            <div class="item">
+              <div class="title">Advanced Data Analytics Semi-Professional (ADsP)</div>
+              <div class="small">Korea Data Agency (KDATA) · Sep 2025</div>
+              <div class="small">Credential ID: ADsP-046012145</div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="foot">Updated from portfolio content on March 19, 2026.</div>
+    </main>
+  </body>
+</html>
