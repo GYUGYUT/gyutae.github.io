@@ -25,3 +25,19 @@ Update these in `index.html`:
 ## CV upload
 
 Upload your CV as `assets/cv.pdf` and the top button will point to it.
+
+## Achievement sync
+
+Achievement data now lives in `data/achievements.json`.
+
+When you add or edit publications, patents, scholarships, awards, or certifications, run:
+
+```bash
+node scripts/sync-achievements.mjs
+```
+
+This updates:
+
+- `index.html`
+- `assets/cv.html`
+- `assets/cv.pdf`

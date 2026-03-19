@@ -1,0 +1,183 @@
+{
+  "publications": [
+    {
+      "id": "residual-sodap-2026",
+      "type": "preprint",
+      "year": 2026,
+      "title": "Residual SODAP: Residual Self-Organizing Domain-Adaptive Prompting with Structural Knowledge Preservation for Continual Learning",
+      "authorsHtml": "<strong>Gyutae Oh</strong>, Jungwoo Bae, Jitae Shin",
+      "venue": "arXiv preprint arXiv:2603.12816",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2603.12816" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2603.12816.pdf" }
+      ],
+      "selectedForCv": true
+    },
+    {
+      "id": "uniprompt-cl-2025",
+      "type": "preprint",
+      "year": 2025,
+      "title": "UniPrompt-CL: Sustainable Continual Learning in Medical AI with Unified Prompt Pools",
+      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin",
+      "venue": "arXiv preprint arXiv:2508.10954",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2508.10954" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2508.10954.pdf" },
+        { "label": "DOI", "url": "https://doi.org/10.48550/arXiv.2508.10954" }
+      ],
+      "selectedForCv": true
+    },
+    {
+      "id": "ek-contrastive-2025",
+      "type": "publication",
+      "year": 2025,
+      "title": "Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy",
+      "authorsHtml": "<strong>G Oh</strong>, Y Won, D Lim, J Shin",
+      "venue": "International Workshop on Ophthalmic Medical Image Analysis",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:eQOLeE2rZwMC"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/GYUGYUT/Multimodal-Fusion-Framework-Using-Contrastive-Learning-for-Exposure-Keratopathy"
+        }
+      ],
+      "selectedForCv": true
+    },
+    {
+      "id": "multihead-prompt-2025",
+      "type": "publication",
+      "year": 2025,
+      "title": "Multi-Head CNN-Attention Prompt Pools: Strengthening Prompt Combination and Contextual Insight for Domain Adaptation",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:Y0pCki6q_DkC"
+        }
+      ],
+      "selectedForCv": false
+    },
+    {
+      "id": "patch-core-2024",
+      "type": "publication",
+      "year": 2024,
+      "title": "Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "venue": "IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:qjMakFHDy7sC"
+        }
+      ],
+      "selectedForCv": true
+    },
+    {
+      "id": "hyperspectral-dr-2024",
+      "type": "publication",
+      "year": 2024,
+      "title": "Hyperspectral Image Augmentation Technique for the Classification of Diabetic Retinopathy",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:9yKSN-GCB0IC"
+        }
+      ],
+      "selectedForCv": false
+    },
+    {
+      "id": "wpw-ecg-2023",
+      "type": "publication",
+      "year": 2023,
+      "title": "Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG",
+      "authorsHtml": "<strong>G Oh</strong>, I Kim, B Kim, Y Jeon, J Gwak",
+      "venue": "Proceedings of the Korean Society of Computer Information Conference",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:u-x6o8ySG0sC"
+        }
+      ],
+      "selectedForCv": true
+    },
+    {
+      "id": "identity-cbam-2022",
+      "type": "publication",
+      "year": 2022,
+      "title": "Identity-CBAM ResNet 기반 얼굴 감정 식별 모듈",
+      "authorsHtml": "<strong>오규태</strong>, 김인기, 김범준, 곽정환",
+      "venue": "한국정보처리학회 학술대회논문집 29 (2)",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=2_rG1kQAAAAJ&amp;citation_for_view=2_rG1kQAAAAJ:u5HHmVD_uO8C"
+        }
+      ],
+      "selectedForCv": false
+    }
+  ],
+  "patents": [
+    {
+      "title": "Device and Method for Diagnosing Exposure Keratopathy based on Multimodal Fusion Learning (Application)",
+      "metaHtml": "<strong>Application No.</strong> 10-2025-0121342 · <strong>Filed</strong> Aug 28, 2025",
+      "summaryHtml": [
+        "Two-stage multimodal fusion learning framework for automatic grading of Exposure Keratopathy (EK). Trained with four ocular imaging modalities collected at a tertiary hospital (broadbeam, slit-beam, scattering, and blue-light): modality-wise features are aligned and fused during training, while inference enables modality-agnostic classification using only a single broadbeam image to implicitly leverage information from other modalities.",
+        "Achieved an average improvement of <strong>+16%p</strong> in F1 and accuracy compared to a single-modality baseline, reducing acquisition burden and improving clinical applicability."
+      ],
+      "selectedForCv": true
+    }
+  ],
+  "scholarships": [
+    {
+      "title": "SKKU BK21 Fellowship (Specialized Scholarship) (2024)",
+      "venue": "Sungkyunkwan University",
+      "selectedForCv": true
+    },
+    {
+      "title": "University Innovation — Merit & Living Expense Scholarship (2024)",
+      "venue": "Sungkyunkwan University",
+      "selectedForCv": true
+    },
+    {
+      "title": "Academic Excellence Scholarship (awarded five times, 2019–2023)",
+      "venue": "Korea National University of Transportation",
+      "selectedForCv": true
+    }
+  ],
+  "awards": [
+    {
+      "title": "Hanium: Companion Dog Eye Disease Detection Assistant App — Silver Prize & Selected Works Prize (2023.11)",
+      "venue": "Hanium ICT Mentoring Program, hosted by the Ministry of Science and ICT (MSIT), Korea",
+      "selectedForCv": true
+    },
+    {
+      "title": "Companion Dog Eye Disease Detection Assistant App — Graduation Project (2023.08)",
+      "venue": "Korea National University of Transportation",
+      "selectedForCv": true
+    },
+    {
+      "title": "Hanium: Automated Serving Robot using Object Detection & SLAM — Grand Prize & Bronze Prize (2020.08)",
+      "venue": "Hanium ICT Mentoring Program, hosted by the Ministry of Science and ICT (MSIT), Korea",
+      "selectedForCv": true
+    },
+    {
+      "title": "Campus Contest: Automated Serving Robot using Object Detection & SLAM — Grand Prize (President’s Award) (2020.09)",
+      "venue": "Korea National University of Transportation",
+      "selectedForCv": true
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Advanced Data Analytics Semi-Professional (ADsP)",
+      "venue": "Issued by Korea Data Agency (KDATA) · Sep 2025",
+      "extraHtml": "<strong>ID</strong>: ADsP-046012145",
+      "selectedForCv": true
+    }
+  ]
+}
