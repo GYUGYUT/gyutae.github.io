@@ -5,7 +5,7 @@
       "type": "preprint",
       "year": 2026,
       "title": "Residual SODAP: Residual Self-Organizing Domain-Adaptive Prompting with Structural Knowledge Preservation for Continual Learning",
-      "authorsHtml": "<strong>Gyutae Oh</strong>, Jungwoo Bae, Jitae Shin",
+      "authorsHtml": "<strong>Gyutae Oh<sup>†</sup></strong>, Jungwoo Bae, Jitae Shin<sup>*</sup>",
       "venue": "arXiv preprint arXiv:2603.12816",
       "links": [
         { "label": "arXiv", "url": "https://arxiv.org/abs/2603.12816" },
@@ -18,7 +18,7 @@
       "type": "preprint",
       "year": 2025,
       "title": "UniPrompt-CL: Sustainable Continual Learning in Medical AI with Unified Prompt Pools",
-      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin",
+      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin<sup>*</sup>",
       "venue": "arXiv preprint arXiv:2508.10954",
       "links": [
         { "label": "arXiv", "url": "https://arxiv.org/abs/2508.10954" },
@@ -32,7 +32,7 @@
       "type": "publication",
       "year": 2025,
       "title": "Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy",
-      "authorsHtml": "<strong>G Oh</strong>, Y Won, D Lim, J Shin",
+      "authorsHtml": "<strong>G Oh<sup>†</sup></strong>, Y Won<sup>†</sup>, D Lim, J Shin<sup>*</sup>",
       "venue": "International Workshop on Ophthalmic Medical Image Analysis",
       "links": [
         {
@@ -51,7 +51,7 @@
       "type": "publication",
       "year": 2025,
       "title": "Multi-Head CNN-Attention Prompt Pools: Strengthening Prompt Combination and Contextual Insight for Domain Adaptation",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
       "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
       "links": [
         {
@@ -66,7 +66,7 @@
       "type": "publication",
       "year": 2024,
       "title": "Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
       "venue": "IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)",
       "links": [
         {
@@ -81,7 +81,7 @@
       "type": "publication",
       "year": 2024,
       "title": "Hyperspectral Image Augmentation Technique for the Classification of Diabetic Retinopathy",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin",
+      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
       "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
       "links": [
         {
@@ -96,7 +96,7 @@
       "type": "publication",
       "year": 2023,
       "title": "Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG",
-      "authorsHtml": "<strong>G Oh</strong>, I Kim, B Kim, Y Jeon, J Gwak",
+      "authorsHtml": "<strong>G Oh<sup>†</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak<sup>*</sup>",
       "venue": "Proceedings of the Korean Society of Computer Information Conference",
       "links": [
         {
