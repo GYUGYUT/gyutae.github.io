@@ -43,6 +43,27 @@
         box-shadow: 0 20px 60px rgba(26, 37, 48, 0.1);
       }
 
+      .actions {
+        width: min(960px, calc(100% - 32px));
+        margin: 24px auto 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .print-button {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 11px 16px;
+        background: linear-gradient(135deg, var(--strong), var(--accent));
+        color: #fff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 14px 32px rgba(31, 111, 102, 0.18);
+      }
+
       .topbar {
         display: flex;
         align-items: flex-start;
@@ -221,6 +242,10 @@
           background: #fff;
         }
 
+        .actions {
+          display: none;
+        }
+
         .page {
           width: auto;
           margin: 0;
@@ -231,6 +256,11 @@
       }
 
       @media (max-width: 760px) {
+        .actions {
+          width: min(960px, calc(100% - 20px));
+          margin-top: 16px;
+        }
+
         .page {
           padding: 24px 20px 28px;
         }
@@ -254,6 +284,9 @@
     </style>
   </head>
   <body>
+    <div class="actions">
+      <button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button>
+    </div>
     <main class="page">
       <header class="topbar">
         <div>
