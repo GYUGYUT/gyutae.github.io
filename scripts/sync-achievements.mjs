@@ -31,6 +31,12 @@ function renderLinks(links, className = "pill") {
     .join("\n");
 }
 
+function publicationMeta(item) {
+  if (item.date) return `${item.venue}, ${item.date}`;
+  if (item.year) return `${item.venue}, ${item.year}`;
+  return item.venue;
+}
+
 function renderPublicationItem(item, indent = "                ") {
   const links = item.links?.length
     ? `\n${indent}<div class="pub-links">\n${renderLinks(item.links)}\n${indent}</div>`
@@ -41,7 +47,7 @@ ${indent}  <div class="pub-title">
 ${indent}    ${item.title}
 ${indent}  </div>
 ${indent}  <div class="pub-authors">${item.authorsHtml}</div>
-${indent}  <div class="pub-venue">${item.venue}</div>${links}
+${indent}  <div class="pub-venue">${publicationMeta(item)}</div>${links}
 ${indent}</li>`;
 }
 
@@ -160,7 +166,7 @@ function renderCvSelectedPublications() {
                   ${item.title}
                 </div>
                 <div class="pub-authors">${item.authorsHtml}</div>
-                <div class="pub-venue">${item.venue}, ${item.year}</div>${links}
+                <div class="pub-venue">${publicationMeta(item)}</div>${links}
               </div>`;
     })
     .join("\n");
