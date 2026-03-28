@@ -37,6 +37,10 @@ function publicationMeta(item) {
   return item.venue;
 }
 
+function underReviewVenueLabel(item) {
+  return item.venue.replace(/\s*\(under review\)\s*$/i, "");
+}
+
 function renderPublicationItem(item, indent = "                ") {
   const links = item.links?.length
     ? `\n${indent}<div class="pub-links">\n${renderLinks(item.links)}\n${indent}</div>`
@@ -172,6 +176,26 @@ function renderCvSelectedPublications() {
     .join("\n");
 }
 
+function renderCvUnderReview() {
+  const items = data.publications.filter((item) => item.underReview);
+  const grouped = new Map();
+
+  for (const item of items) {
+    const label = `${underReviewVenueLabel(item)} ${item.year}`;
+    grouped.set(label, (grouped.get(label) || 0) + 1);
+  }
+
+  return Array.from(grouped.entries())
+    .map(([label, count]) => {
+      const submissionLabel = count === 1 ? "1 anonymous submission under review" : `${count} anonymous submissions under review`;
+      return `            <div class="item">
+              <div class="title">${label}</div>
+              <div class="small">${submissionLabel}</div>
+            </div>`;
+    })
+    .join("\n");
+}
+
 function renderCvList(items) {
   return items
     .filter((item) => item.selectedForCv)
@@ -221,6 +245,7 @@ fs.writeFileSync(indexPath, indexHtml);
 let cvHtml = fs.readFileSync(cvHtmlPath, "utf8");
 cvHtml = replaceBetween(cvHtml, "generated-cv-output-summary", renderCvOutputsSummary());
 cvHtml = replaceBetween(cvHtml, "generated-cv-selected-publications", renderCvSelectedPublications());
+cvHtml = replaceBetween(cvHtml, "generated-cv-under-review", renderCvUnderReview());
 cvHtml = replaceBetween(cvHtml, "generated-cv-awards", renderCvList(data.awards));
 cvHtml = replaceBetween(cvHtml, "generated-cv-scholarships", renderCvList(data.scholarships));
 cvHtml = replaceBetween(cvHtml, "generated-cv-patent", renderCvPatent());
