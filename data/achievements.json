@@ -14,6 +14,26 @@
       "selectedForCv": true
     },
     {
+      "id": "anonymous-miccai-under-review-2026",
+      "type": "preprint",
+      "year": 2026,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "MICCAI (under review)",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
+      "id": "anonymous-icip-under-review-2026",
+      "type": "preprint",
+      "year": 2026,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "ICIP (under review)",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
       "id": "routing-prompts-across-layers-2026",
       "type": "publication",
       "year": 2026,
