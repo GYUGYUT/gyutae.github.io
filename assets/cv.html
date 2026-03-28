@@ -31,13 +31,13 @@
           radial-gradient(circle at top left, rgba(31, 111, 102, 0.1), transparent 24%),
           linear-gradient(180deg, rgba(203, 148, 79, 0.08), transparent 18%),
           var(--page);
-        line-height: 1.45;
+        line-height: 1.4;
       }
 
       .page {
         width: min(960px, calc(100% - 32px));
         margin: 24px auto;
-        padding: 36px 40px 44px;
+        padding: 32px 36px 40px;
         background: var(--paper);
         border: 1px solid rgba(26, 37, 48, 0.08);
         box-shadow: 0 20px 60px rgba(26, 37, 48, 0.1);
@@ -117,7 +117,7 @@
       }
 
       section {
-        margin-top: 22px;
+        margin-top: 18px;
       }
 
       h2 {
@@ -131,17 +131,17 @@
       .rule {
         height: 1px;
         background: var(--line);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       .item {
         margin-top: 0;
-        padding: 0 0 12px;
+        padding: 0 0 10px;
       }
 
       .item + .item {
         border-top: 1px solid rgba(214, 206, 193, 0.7);
-        padding-top: 12px;
+        padding-top: 10px;
       }
 
       .row {
@@ -208,18 +208,18 @@
       }
 
       .pub-authors {
-        margin-top: 4px;
+        margin-top: 3px;
         font-size: 12px;
       }
 
       .pub-venue {
-        margin-top: 3px;
+        margin-top: 2px;
         font-size: 12px;
         color: var(--muted);
       }
 
       .links {
-        margin-top: 6px;
+        margin-top: 4px;
         font-size: 12px;
       }
 
@@ -227,6 +227,40 @@
         color: var(--strong);
         text-decoration: none;
         margin-right: 10px;
+      }
+
+      .compact .item {
+        padding-bottom: 10px;
+      }
+
+      .compact .item + .item {
+        padding-top: 10px;
+      }
+
+      .pub-list {
+        gap: 8px;
+      }
+
+      .pub-list .item {
+        padding-bottom: 8px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .pub-list .item + .item {
+        padding-top: 8px;
+      }
+
+      .pub-list .pub-title {
+        font-size: 12.5px;
+        line-height: 1.3;
+      }
+
+      .pub-list .pub-authors,
+      .pub-list .pub-venue,
+      .pub-list .links {
+        font-size: 11.5px;
+        line-height: 1.25;
       }
 
       .foot {
@@ -249,7 +283,7 @@
         .page {
           width: auto;
           margin: 0;
-          padding: 24px 28px 30px;
+          padding: 20px 24px 24px;
           border: 0;
           box-shadow: none;
         }
@@ -297,6 +331,7 @@
           <div>Media System Lab (MSL), Sungkyunkwan University</div>
           <div>Electrical and Computer Engineering</div>
           <div><a href="mailto:alswo740012@g.skku.edu">alswo740012@g.skku.edu</a></div>
+          <div><a href="https://gyugyut.github.io">Portfolio</a></div>
           <div><a href="https://scholar.google.com/citations?user=2_rG1kQAAAAJ&hl=en">Google Scholar</a></div>
           <div><a href="https://github.com/GYUGYUT">github.com/GYUGYUT</a></div>
           <div><a href="https://www.linkedin.com/in/%EA%B7%9C%ED%83%9C-%EC%98%A4-6754022b0">LinkedIn</a></div>
@@ -371,7 +406,7 @@
             <h2>Selected Publications</h2>
             <div class="rule"></div>
             <div class="small">† First author, * Corresponding author</div>
-            <div class="compact">
+            <div class="compact pub-list">
               <!-- generated-cv-selected-publications:start -->
               <div class="item">
                 <div class="pub-title">
@@ -383,6 +418,13 @@
                   <a href="https://arxiv.org/abs/2603.12816">arXiv</a>
                   <a href="https://arxiv.org/pdf/2603.12816.pdf">PDF</a>
                 </div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  Routing Prompts Across Layers: A Global Memory Module for Prompt-Based Continual Learning
+                </div>
+                <div class="pub-authors"><strong>Gyutae Oh</strong>, Jitae Shin</div>
+                <div class="pub-venue">International Conference on Computer Research and Development (ICCRD), Jan 24, 2026</div>
               </div>
               <div class="item">
                 <div class="pub-title">
@@ -487,8 +529,8 @@
             <h2>Research Outputs</h2>
             <div class="rule"></div>
             <div class="item">
-              <div class="title">8 total papers</div>
-              <div class="small">2 preprints · 6 peer-reviewed publications</div>
+              <div class="title">9 total papers</div>
+              <div class="small">2 preprints · 7 peer-reviewed publications</div>
             </div>
             <div class="item">
               <div class="title">1 patent</div>

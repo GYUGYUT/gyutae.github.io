@@ -14,6 +14,16 @@
       "selectedForCv": true
     },
     {
+      "id": "routing-prompts-across-layers-2026",
+      "type": "publication",
+      "year": 2026,
+      "title": "Routing Prompts Across Layers: A Global Memory Module for Prompt-Based Continual Learning",
+      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin",
+      "venue": "International Conference on Computer Research and Development (ICCRD), Jan 24",
+      "links": [],
+      "selectedForCv": true
+    },
+    {
       "id": "uniprompt-cl-2025",
       "type": "preprint",
       "year": 2025,
