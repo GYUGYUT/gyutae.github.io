@@ -4,14 +4,11 @@
       "id": "residual-sodap-2026",
       "type": "preprint",
       "year": 2026,
-      "title": "Residual SODAP: Residual Self-Organizing Domain-Adaptive Prompting with Structural Knowledge Preservation for Continual Learning",
-      "authorsHtml": "<strong>Gyutae Oh<sup>†</sup></strong>, Jungwoo Bae, Jitae Shin<sup>*</sup>",
-      "venue": "arXiv preprint arXiv:2603.12816",
-      "links": [
-        { "label": "arXiv", "url": "https://arxiv.org/abs/2603.12816" },
-        { "label": "PDF", "url": "https://arxiv.org/pdf/2603.12816.pdf" }
-      ],
-      "selectedForCv": true
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "ECCV (under review)",
+      "links": [],
+      "selectedForCv": false
     },
     {
       "id": "anonymous-miccai-under-review-2026",
@@ -47,16 +44,12 @@
     {
       "id": "uniprompt-cl-2025",
       "type": "preprint",
-      "year": 2025,
-      "title": "UniPrompt-CL: Sustainable Continual Learning in Medical AI with Unified Prompt Pools",
-      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin<sup>*</sup>",
-      "venue": "arXiv preprint arXiv:2508.10954",
-      "links": [
-        { "label": "arXiv", "url": "https://arxiv.org/abs/2508.10954" },
-        { "label": "PDF", "url": "https://arxiv.org/pdf/2508.10954.pdf" },
-        { "label": "DOI", "url": "https://doi.org/10.48550/arXiv.2508.10954" }
-      ],
-      "selectedForCv": true
+      "year": 2026,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "ECCV (under review)",
+      "links": [],
+      "selectedForCv": false
     },
     {
       "id": "ek-contrastive-2025",
@@ -64,7 +57,7 @@
       "year": 2025,
       "title": "Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy",
       "authorsHtml": "<strong>G Oh<sup>†</sup></strong>, Y Won<sup>†</sup>, D Lim, J Shin<sup>*</sup>",
-      "venue": "International Workshop on Ophthalmic Medical Image Analysis",
+      "venue": "International Workshop on Ophthalmic Medical Image Analysis (MICCAI 2025 Workshop)",
       "links": [
         {
           "label": "Scholar",
