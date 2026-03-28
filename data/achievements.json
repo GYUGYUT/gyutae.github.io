@@ -165,16 +165,19 @@
     {
       "title": "SKKU BK21 Fellowship (Specialized Scholarship) (2024)",
       "venue": "Sungkyunkwan University",
+      "count": 1,
       "selectedForCv": true
     },
     {
       "title": "University Innovation — Merit & Living Expense Scholarship (2024)",
       "venue": "Sungkyunkwan University",
+      "count": 1,
       "selectedForCv": true
     },
     {
-      "title": "Academic Excellence Scholarship (awarded five times, 2019–2023)",
+      "title": "Academic Excellence Scholarship (awarded 5 times, 2019–2023)",
       "venue": "Korea National University of Transportation",
+      "count": 5,
       "selectedForCv": true
     }
   ],

@@ -138,9 +138,14 @@ ${data.patents.map((item) => renderPatentItem(item)).join("\n")}
           </div>`;
 }
 
+function totalScholarships() {
+  return data.scholarships.reduce((sum, item) => sum + (item.count || 1), 0);
+}
+
 function renderCvOutputsSummary() {
   const publicationCount = data.publications.length;
   const preprintCount = data.publications.filter((item) => item.type === "preprint").length;
+  const scholarshipCount = totalScholarships();
   return `
           <section>
             <h2>Research Outputs</h2>
@@ -151,7 +156,7 @@ function renderCvOutputsSummary() {
             </div>
             <div class="item">
               <div class="title">${data.patents.length} patent</div>
-              <div class="small">${data.scholarships.length} scholarships · ${data.awards.length} awards · ${data.certifications.length} certification</div>
+              <div class="small">${scholarshipCount} scholarships · ${data.awards.length} awards · ${data.certifications.length} certification</div>
             </div>
           </section>`;
 }
@@ -226,7 +231,7 @@ function atAGlanceText() {
   const totalPapers = data.publications.length;
   const preprints = data.publications.filter((item) => item.type === "preprint").length;
   const patents = data.patents.length;
-  const scholarships = data.scholarships.length;
+  const scholarships = totalScholarships();
   const awards = data.awards.length;
   const certifications = data.certifications.length;
   return `${totalPapers} papers (${preprints} preprints), ${patents} patent, ${scholarships} scholarships, ${awards} awards, ${certifications} certification`;
