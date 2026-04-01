@@ -213,5 +213,12 @@
       "extraHtml": "<strong>ID</strong>: ADsP-046012145",
       "selectedForCv": true
     }
+  ],
+  "services": [
+    {
+      "title": "Reviewer (2026)",
+      "venue": "IEEE International Conference on Image Processing (ICIP)",
+      "selectedForCv": true
+    }
   ]
 }

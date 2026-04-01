@@ -125,7 +125,12 @@ ${data.awards.map((item) => renderSimpleItem(item)).join("\n")}
 ${data.certifications.map((item) => renderSimpleItem(item)).join("\n")}
               </ol>
             </div>
-            <div></div>
+            <div class="card">
+              <h3>Professional Service</h3>
+              <ol class="pubs">
+${data.services.map((item) => renderSimpleItem(item)).join("\n")}
+              </ol>
+            </div>
           </div>`;
 }
 
@@ -156,7 +161,7 @@ function renderCvOutputsSummary() {
             </div>
             <div class="item">
               <div class="title">${data.patents.length} patent</div>
-              <div class="small">${scholarshipCount} scholarships · ${data.awards.length} awards · ${data.certifications.length} certification</div>
+              <div class="small">${scholarshipCount} scholarships · ${data.awards.length} awards · ${data.certifications.length} certification · ${data.services.length} service</div>
             </div>
           </section>`;
 }
@@ -234,7 +239,8 @@ function atAGlanceText() {
   const scholarships = totalScholarships();
   const awards = data.awards.length;
   const certifications = data.certifications.length;
-  return `${totalPapers} papers (${preprints} preprints), ${patents} patent, ${scholarships} scholarships, ${awards} awards, ${certifications} certification`;
+  const services = data.services.length;
+  return `${totalPapers} papers (${preprints} preprints), ${patents} patent, ${scholarships} scholarships, ${awards} awards, ${certifications} certification, ${services} service`;
 }
 
 let indexHtml = fs.readFileSync(indexPath, "utf8");
@@ -255,6 +261,7 @@ cvHtml = replaceBetween(cvHtml, "generated-cv-awards", renderCvList(data.awards)
 cvHtml = replaceBetween(cvHtml, "generated-cv-scholarships", renderCvList(data.scholarships));
 cvHtml = replaceBetween(cvHtml, "generated-cv-patent", renderCvPatent());
 cvHtml = replaceBetween(cvHtml, "generated-cv-certifications", renderCvList(data.certifications));
+cvHtml = replaceBetween(cvHtml, "generated-cv-services", renderCvList(data.services));
 fs.writeFileSync(cvHtmlPath, cvHtml);
 
 try {
