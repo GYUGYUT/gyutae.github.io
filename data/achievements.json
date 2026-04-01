@@ -6,7 +6,7 @@
       "underReview": true,
       "year": 2026,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
       "venue": "ECCV (under review)",
       "links": [],
       "selectedForCv": false
@@ -17,7 +17,7 @@
       "underReview": true,
       "year": 2026,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
       "venue": "MICCAI (under review)",
       "links": [],
       "selectedForCv": false
@@ -28,7 +28,7 @@
       "underReview": true,
       "year": 2026,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
       "venue": "ICIP (under review)",
       "links": [],
       "selectedForCv": false
@@ -50,7 +50,7 @@
       "underReview": true,
       "year": 2026,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
       "venue": "ECCV (under review)",
       "links": [],
       "selectedForCv": false
