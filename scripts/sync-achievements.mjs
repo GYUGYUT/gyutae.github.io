@@ -118,7 +118,7 @@ ${data.awards.map((item) => renderSimpleItem(item)).join("\n")}
             </div>
           </div>
 
-          <div class="grid two" style="margin-top: 12px">
+          <div class="grid two grid-spaced">
             <div class="card">
               <h3>Certifications</h3>
               <ol class="pubs">
