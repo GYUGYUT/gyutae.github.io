@@ -35,7 +35,7 @@
           <span class="brand-text">Gyutae Oh</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
+        <nav id="primaryNav" class="nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
@@ -44,6 +44,9 @@
         </nav>
 
         <div class="header-actions">
+          <button id="menuToggle" class="btn btn-ghost menu-toggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
           <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">
             <span class="theme-icon" aria-hidden="true"></span>
             <span class="hide-sm">Theme</span>
@@ -88,70 +91,22 @@
                   >LinkedIn</a
                 >
               </div>
-              <div class="stack-panel" aria-label="AI development stack">
-                <div class="stack-row">
-                  <span>modeling</span>
-                  <strong>PyTorch · CL · Medical AI</strong>
-                </div>
-                <div class="stack-row">
-                  <span>evaluation</span>
-                  <strong>OOD · robustness · metrics</strong>
-                </div>
-                <div class="stack-row">
-                  <span>delivery</span>
-                  <strong>papers · patents · deployed prototypes</strong>
-                </div>
-              </div>
             </div>
           </div>
 
           <div class="hero-copy">
             <p class="kicker">AI Developer · Research Engineer</p>
-            <h1 class="hero-title">
+            <h1 class="hero-title" aria-label="Building AI that adapts">
               Building AI that
-              <span class="gradient">adapts.</span>
+              <span class="hero-word-line" aria-hidden="true"><span id="heroWord" class="gradient">adapts.</span></span>
             </h1>
-            <p class="hero-subtitle">
-              I turn continual learning and medical imaging research into AI systems designed for changing data and practical evaluation.
-            </p>
-            <p class="hero-subtitle">
-              Ph.D. researcher at Media System Lab, Sungkyunkwan University.
-            </p>
-
-            <div class="focus">
-              <div class="focus-title">Development focus</div>
-              <ul class="bullets">
-                <li>Designing efficient learning pipelines for reliable medical AI</li>
-                <li>Building continual learning systems that reduce catastrophic forgetting</li>
-                <li>Evaluating anomaly detection and image analysis models under practical constraints</li>
-              </ul>
-            </div>
+            <p class="hero-lede">Continual learning and medical AI built for changing data and practical use.</p>
 
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects">Projects</a>
-              <a class="btn btn-ghost" href="./assets/cv.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
-              <a class="btn btn-ghost" href="#publications">Publications</a>
-              <a class="btn btn-ghost" href="mailto:alswo740012@g.skku.edu">Email</a>
+              <a class="btn btn-primary" href="#projects">Explore work <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="./assets/cv.pdf" target="_blank" rel="noreferrer">View CV</a>
             </div>
-
-            <div class="hero-meta">
-              <div class="meta-item">
-                <div class="meta-label">Affiliation</div>
-                <div class="meta-value">Sungkyunkwan University · ECE · MSL</div>
-              </div>
-              <div class="meta-item">
-                <div class="meta-label">Interests</div>
-                <div class="meta-value">Continual Learning · Anomaly Detection · Medical Imaging</div>
-              </div>
-              <div class="meta-item">
-                <div class="meta-label">Current</div>
-                <div class="meta-value">Adaptive multimodal inference · Continual learning</div>
-              </div>
-              <div class="meta-item">
-                <div class="meta-label">At a glance</div>
-                <div class="meta-value">17 papers (5 preprints), 1 patent, 7 scholarships, 4 awards, 1 certification, 1 service</div>
-              </div>
-            </div>
+            <p class="hero-note"><span class="status-dot" aria-hidden="true"></span> Ph.D. researcher · Media System Lab, SKKU</p>
           </div>
         </div>
       </section>
@@ -177,6 +132,10 @@
                 <span class="when">2026</span>
                 <span class="what">Graduated with M.S. in ECE from Sungkyunkwan University.</span>
               </li>
+            </ul>
+            <details class="expander compact-expander">
+              <summary><span>Earlier milestones</span><span class="expander-count">2024–2025</span></summary>
+              <ul class="timeline">
               <li>
                 <span class="when">2025</span>
                 <span class="what">MICCAI 2025 Workshop publication (Exposure Keratitis / multimodal fusion).</span>
@@ -189,7 +148,8 @@
                 <span class="when">2024</span>
                 <span class="what">Started M.S. in ECE at Sungkyunkwan University.</span>
               </li>
-            </ul>
+              </ul>
+            </details>
           </div>
         </div>
       </section>
@@ -223,6 +183,8 @@
             </div>
           </div>
 
+          <details class="expander about-expander">
+            <summary><span>Education, research experience &amp; service</span><span class="expander-count">Ph.D. GPA 4.5/4.5</span></summary>
           <div class="grid two grid-spaced">
             <div class="card">
               <h3>Education</h3>
@@ -274,8 +236,8 @@
                 </li>
               </ol>
             </div>
-            <div></div>
           </div>
+          </details>
         </div>
       </section>
 
@@ -286,7 +248,7 @@
             <p>Short summaries of what I study and why it matters.</p>
           </div>
 
-          <div class="grid three">
+          <div class="grid three research-grid">
             <article class="card">
               <h3>Continual Learning</h3>
               <p>Mitigating catastrophic forgetting while learning from non-stationary data streams.</p>
@@ -322,8 +284,8 @@
             <p>Selected projects spanning robotics and medical AI.</p>
           </div>
 
-          <div class="projects">
-            <article class="card project">
+          <div class="projects featured-projects">
+            <article class="card project is-featured">
               <div class="project-top">
                 <h3>[NRF Core Research] Development of an Adaptive State Inference and Real-Time Monitoring System for Short-Term Deterioration Using Partially Available Multimodal Data</h3>
               </div>
@@ -359,6 +321,11 @@
                 <li>Sungkyunkwan University</li>
               </ul>
             </article>
+          </div>
+
+          <details class="expander project-expander">
+            <summary><span>Explore four more projects</span><span class="expander-count">Medical AI · Robotics</span></summary>
+            <div class="projects more-projects">
 
             <article class="card project">
               <div class="project-top">
@@ -454,6 +421,7 @@
               </ul>
             </article>
           </div>
+          </details>
         </div>
       </section>
 
@@ -466,51 +434,15 @@
 
           <!-- generated-publications:start -->
 
-          <div class="grid two">
-            <div class="card">
-              <h3>Preprints</h3>
-              <ol class="pubs">
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous</strong></div>
-                  <div class="pub-venue">CVPR (under review), 2027</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous</strong></div>
-                  <div class="pub-venue">CVPR (under review), 2027</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous</strong></div>
-                  <div class="pub-venue">CVPR (under review), 2027</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous</strong></div>
-                  <div class="pub-venue">ICLR (under review), 2027</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous</strong></div>
-                  <div class="pub-venue">JBHI (under review), 2026</div>
-                </li>
-              </ol>
+          <div class="card publication-featured">
+            <div class="feature-head">
+              <div><h3>Selected publications</h3><p>5 highlights · Scroll to explore</p></div>
+              <div class="carousel-actions">
+                <button class="carousel-button" type="button" data-carousel-direction="-1" aria-controls="featuredPubs" aria-label="Previous publication">←</button>
+                <button class="carousel-button" type="button" data-carousel-direction="1" aria-controls="featuredPubs" aria-label="Next publication">→</button>
+              </div>
             </div>
-
-            <div class="card">
-              <h3>Publications</h3>
-              <ol class="pubs">
+            <ol id="featuredPubs" class="pubs featured-pubs">
                 <li>
                   <div class="pub-title">
                     UniPrompt-CL: Efficient Single-Inference Continual Learning for Medical Image Classification
@@ -525,30 +457,13 @@
                   <div class="pub-authors">Hyunmin Kong, <strong>Gyutae Oh</strong>, Jitae Shin</div>
                   <div class="pub-venue">ACCV, 2026</div>
                 </li>
-                <li>
+                <li class="is-oral">
                   <div class="pub-title">
                     Change Detection in Longitudinal Chest X-rays Is Readout-Limited, Not Task-Limited
                   </div>
                   <div class="pub-authors">Seungin Baek, <strong>Gyutae Oh</strong>, Jitae Shin</div>
                   <div class="pub-venue">ACCV, 2026</div>
                   <span class="pub-distinction">Oral</span>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Spectral Descriptor Conditioning: Efficient and Interpretable All-in-One Image Restoration via Polar Frequency Signatures
-                  </div>
-                  <div class="pub-authors">Jungwoo Bae, <strong>Gyutae Oh</strong>, Hyunmin Kong, Jitae Shin</div>
-                  <div class="pub-venue">ACCV, 2026</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Causal Representation-Based Personalized Federated Learning with Causal Graph Consensus for Medical Imaging
-                  </div>
-                  <div class="pub-authors">Wooseok Shin, Zhiqiang Shen, <strong>Gyutae Oh</strong>, Jitae Shin</div>
-                  <div class="pub-venue">Electronics, 15(10), 1983, May 7, 2026</div>
-                <div class="pub-links">
-                    <a class="pill" href="https://doi.org/10.3390/electronics15101983" target="_blank" rel="noreferrer">Paper</a>
-                </div>
                 </li>
                 <li>
                   <div class="pub-title">
@@ -566,6 +481,32 @@
                 <div class="pub-links">
                     <a class="pill" href="https://link.springer.com/chapter/10.1007/978-3-032-10351-2_3" target="_blank" rel="noreferrer">Paper</a>
                     <a class="pill" href="https://github.com/GYUGYUT/Multimodal-Fusion-Framework-Using-Contrastive-Learning-for-Exposure-Keratopathy" target="_blank" rel="noreferrer">Code</a>
+                </div>
+                </li>
+            </ol>
+          </div>
+
+          <details class="expander publication-expander">
+            <summary><span>Browse the full list</span><span class="expander-count">12 more records</span></summary>
+          <div class="grid two">
+            <div class="card">
+              <h3>Other publications</h3>
+              <ol class="pubs">
+                <li>
+                  <div class="pub-title">
+                    Spectral Descriptor Conditioning: Efficient and Interpretable All-in-One Image Restoration via Polar Frequency Signatures
+                  </div>
+                  <div class="pub-authors">Jungwoo Bae, <strong>Gyutae Oh</strong>, Hyunmin Kong, Jitae Shin</div>
+                  <div class="pub-venue">ACCV, 2026</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Causal Representation-Based Personalized Federated Learning with Causal Graph Consensus for Medical Imaging
+                  </div>
+                  <div class="pub-authors">Wooseok Shin, Zhiqiang Shen, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                  <div class="pub-venue">Electronics, 15(10), 1983, May 7, 2026</div>
+                <div class="pub-links">
+                    <a class="pill" href="https://doi.org/10.3390/electronics15101983" target="_blank" rel="noreferrer">Paper</a>
                 </div>
                 </li>
                 <li>
@@ -620,7 +561,49 @@
                 </li>
               </ol>
             </div>
+
+            <div class="card">
+              <h3>Anonymous submissions</h3>
+              <ol class="pubs">
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">ICLR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">JBHI (under review), 2026</div>
+                </li>
+              </ol>
+            </div>
           </div>
+          </details>
 <!-- generated-publications:end -->
         </div>
       </section>
@@ -634,6 +617,14 @@
 
           <!-- generated-honors:start -->
 
+          <div class="honor-overview">
+            <div class="honor-stat"><strong>7</strong><span>Scholarships</span></div>
+            <div class="honor-stat"><strong>4</strong><span>Awards</span></div>
+            <div class="honor-stat"><strong>1</strong><span>Certification</span></div>
+            <div class="honor-stat"><strong>1</strong><span>Service</span></div>
+          </div>
+          <details class="expander honors-expander">
+            <summary><span>Explore honors and credentials</span><span class="expander-count">Full record</span></summary>
           <div class="grid two">
             <div class="card">
               <h3>Scholarships</h3>
@@ -700,6 +691,7 @@
               </ol>
             </div>
           </div>
+          </details>
 <!-- generated-honors:end -->
         </div>
       </section>

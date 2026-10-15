@@ -52,7 +52,7 @@ function renderPublicationItem(item, indent = "                ") {
     ? `\n${indent}  <span class="pub-distinction">${item.distinction}</span>`
     : "";
 
-  return `${indent}<li>
+  return `${indent}<li${item.distinction ? ' class="is-oral"' : ""}>
 ${indent}  <div class="pub-title">
 ${indent}    ${item.title}
 ${indent}  </div>
@@ -87,27 +87,53 @@ ${indent}</li>`;
 function renderIndexAchievements() {
   const preprints = data.publications.filter((item) => item.type === "preprint");
   const publications = data.publications.filter((item) => item.type === "publication");
+  const selected = publications.filter((item) => item.selectedForCv);
+  const archive = publications.filter((item) => !item.selectedForCv);
 
   return `
+          <div class="card publication-featured">
+            <div class="feature-head">
+              <div><h3>Selected publications</h3><p>${selected.length} highlights · Scroll to explore</p></div>
+              <div class="carousel-actions">
+                <button class="carousel-button" type="button" data-carousel-direction="-1" aria-controls="featuredPubs" aria-label="Previous publication">←</button>
+                <button class="carousel-button" type="button" data-carousel-direction="1" aria-controls="featuredPubs" aria-label="Next publication">→</button>
+              </div>
+            </div>
+            <ol id="featuredPubs" class="pubs featured-pubs">
+${selected.map((item) => renderPublicationItem(item)).join("\n")}
+            </ol>
+          </div>
+
+          <details class="expander publication-expander">
+            <summary><span>Browse the full list</span><span class="expander-count">${archive.length + preprints.length} more records</span></summary>
           <div class="grid two">
             <div class="card">
-              <h3>Preprints</h3>
+              <h3>Other publications</h3>
+              <ol class="pubs">
+${archive.map((item) => renderPublicationItem(item)).join("\n")}
+              </ol>
+            </div>
+
+            <div class="card">
+              <h3>Anonymous submissions</h3>
               <ol class="pubs">
 ${preprints.map((item) => renderPublicationItem(item)).join("\n")}
               </ol>
             </div>
-
-            <div class="card">
-              <h3>Publications</h3>
-              <ol class="pubs">
-${publications.map((item) => renderPublicationItem(item)).join("\n")}
-              </ol>
-            </div>
-          </div>`;
+          </div>
+          </details>`;
 }
 
 function renderIndexHonors() {
   return `
+          <div class="honor-overview">
+            <div class="honor-stat"><strong>${totalScholarships()}</strong><span>Scholarships</span></div>
+            <div class="honor-stat"><strong>${data.awards.length}</strong><span>Awards</span></div>
+            <div class="honor-stat"><strong>${data.certifications.length}</strong><span>Certification</span></div>
+            <div class="honor-stat"><strong>${data.services.length}</strong><span>Service</span></div>
+          </div>
+          <details class="expander honors-expander">
+            <summary><span>Explore honors and credentials</span><span class="expander-count">Full record</span></summary>
           <div class="grid two">
             <div class="card">
               <h3>Scholarships</h3>
@@ -137,7 +163,8 @@ ${data.certifications.map((item) => renderSimpleItem(item)).join("\n")}
 ${data.services.map((item) => renderSimpleItem(item)).join("\n")}
               </ol>
             </div>
-          </div>`;
+          </div>
+          </details>`;
 }
 
 function renderIndexPatents() {
@@ -239,22 +266,7 @@ function renderCvPatent() {
     .join("\n");
 }
 
-function atAGlanceText() {
-  const totalPapers = data.publications.length;
-  const preprints = data.publications.filter((item) => item.type === "preprint").length;
-  const patents = data.patents.length;
-  const scholarships = totalScholarships();
-  const awards = data.awards.length;
-  const certifications = data.certifications.length;
-  const services = data.services.length;
-  return `${totalPapers} papers (${preprints} preprints), ${patents} patent, ${scholarships} scholarships, ${awards} awards, ${certifications} certification, ${services} service`;
-}
-
 let indexHtml = fs.readFileSync(indexPath, "utf8");
-indexHtml = indexHtml.replace(
-  /<div class="meta-label">At a glance<\/div>\s*<div class="meta-value">[\s\S]*?<\/div>/,
-  `<div class="meta-label">At a glance</div>\n                <div class="meta-value">${atAGlanceText()}</div>`
-);
 indexHtml = replaceBetween(indexHtml, "generated-publications", renderIndexAchievements());
 indexHtml = replaceBetween(indexHtml, "generated-honors", renderIndexHonors());
 indexHtml = replaceBetween(indexHtml, "generated-patents", renderIndexPatents());
