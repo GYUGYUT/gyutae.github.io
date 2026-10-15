@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/styles.css" />
@@ -31,7 +31,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Home">
-          <span class="brand-mark" aria-hidden="true">AI</span>
+          <span class="brand-mark" aria-hidden="true">GO</span>
           <span class="brand-text">Gyutae Oh</span>
         </a>
 
@@ -108,17 +108,14 @@
           <div class="hero-copy">
             <p class="kicker">AI Developer · Research Engineer</p>
             <h1 class="hero-title">
-              I build reliable
-              <span class="gradient">AI systems</span>
-              from models to evaluation.
+              Building AI that
+              <span class="gradient">adapts.</span>
             </h1>
             <p class="hero-subtitle">
-              I develop artificial intelligence systems at Media System Lab (MSL), Sungkyunkwan University, with a focus
-              on efficient learning, robust evaluation, and medical imaging applications.
+              I turn continual learning and medical imaging research into AI systems designed for changing data and practical evaluation.
             </p>
             <p class="hero-subtitle">
-              My work connects model design, training pipelines, and deployment-oriented metrics across Continual
-              Learning, Anomaly Detection, and Medical Image Analysis.
+              Ph.D. researcher at Media System Lab, Sungkyunkwan University.
             </p>
 
             <div class="focus">
@@ -148,11 +145,11 @@
               </div>
               <div class="meta-item">
                 <div class="meta-label">Current</div>
-                <div class="meta-value">Continual Learning (medical AI)</div>
+                <div class="meta-value">Adaptive multimodal inference · Continual learning</div>
               </div>
               <div class="meta-item">
                 <div class="meta-label">At a glance</div>
-                <div class="meta-value">11 papers (4 preprints), 1 patent, 7 scholarships, 4 awards, 1 certification, 1 service</div>
+                <div class="meta-value">17 papers (5 preprints), 1 patent, 7 scholarships, 4 awards, 1 certification, 1 service</div>
               </div>
             </div>
           </div>
@@ -168,6 +165,10 @@
 
           <div class="card">
             <ul class="timeline">
+              <li>
+                <span class="when">2026</span>
+                <span class="what">Published research on causal graph consensus for personalized federated medical imaging in <a class="inline-link" href="https://doi.org/10.3390/electronics15101983" target="_blank" rel="noreferrer"><em>Electronics</em></a>.</span>
+              </li>
               <li>
                 <span class="when">2026</span>
                 <span class="what">Started Ph.D. in ECE at Sungkyunkwan University.</span>
@@ -189,9 +190,6 @@
                 <span class="what">Started M.S. in ECE at Sungkyunkwan University.</span>
               </li>
             </ul>
-            <div class="muted last-updated">
-              Last updated: <span id="lastUpdated"></span>
-            </div>
           </div>
         </div>
       </section>
@@ -231,7 +229,7 @@
               <ol class="pubs">
                 <li>
                   <div class="pub-title">Sungkyunkwan University — Ph.D. in Electrical and Computer Engineering</div>
-                  <div class="pub-venue">Feb 2026 – Present</div>
+                  <div class="pub-venue">Feb 2026 – Present · GPA: 4.5/4.5</div>
                 </li>
                 <li>
                   <div class="pub-title">Sungkyunkwan University — M.S. in Electrical and Computer Engineering</div>
@@ -327,22 +325,37 @@
           <div class="projects">
             <article class="card project">
               <div class="project-top">
+                <h3>[NRF Core Research] Development of an Adaptive State Inference and Real-Time Monitoring System for Short-Term Deterioration Using Partially Available Multimodal Data</h3>
+              </div>
+              <p class="project-desc">
+                Developing models that infer changing conditions when some data modalities are unavailable, together with
+                a system that monitors short-term deterioration in real time.
+              </p>
+              <ul class="tags">
+                <li>Multimodal Learning</li>
+                <li>Adaptive Inference</li>
+                <li>Real-Time Monitoring</li>
+                <li>2026.09–2028.09</li>
+                <li>National Research Foundation of Korea (NRF)</li>
+              </ul>
+            </article>
+
+            <article class="card project">
+              <div class="project-top">
                 <h3>[SKKU–SMC] Exposure Keratitis Diagnosis &amp; Severity Prediction (Year 2)</h3>
                 <div class="project-links">
                   <a class="pill" href="#publications" rel="noreferrer">Related work</a>
-                  <a class="pill" href="#patents" rel="noreferrer">Patent goal</a>
                 </div>
               </div>
               <p class="project-desc">
-                Continuing the collaboration with Kangbuk Samsung Hospital to improve real-world applicability through
-                model compression and performance enhancements. Planning an international submission (MICCAI) and aiming
-                to secure additional domestic/international patent(s).
+                Completed the second phase of a collaboration with Kangbuk Samsung Hospital, focusing on model compression
+                and performance improvements to support practical use of exposure keratitis AI.
               </p>
               <ul class="tags">
                 <li>Efficient Learning</li>
                 <li>Model Compression</li>
                 <li>Medical AI</li>
-                <li>2025.10–Present</li>
+                <li>2025.10–2026.10</li>
                 <li>Sungkyunkwan University</li>
               </ul>
             </article>
@@ -448,7 +461,7 @@
         <div class="container">
           <div class="section-head">
             <h2>Publications</h2>
-            <p>Peer-reviewed papers and preprints. † First author, * Corresponding author.</p>
+            <p>Peer-reviewed papers and preprints. * First author.</p>
           </div>
 
           <!-- generated-publications:start -->
@@ -461,29 +474,36 @@
                   <div class="pub-title">
                     Anonymous Submission
                   </div>
-                  <div class="pub-authors"><strong>Anonymous<sup>†</sup></strong></div>
-                  <div class="pub-venue">AAAI (under review), 2027</div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
                 </li>
                 <li>
                   <div class="pub-title">
                     Anonymous Submission
                   </div>
-                  <div class="pub-authors"><strong>Anonymous<sup>†</sup></strong></div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">CVPR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
+                  <div class="pub-venue">ICLR (under review), 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Anonymous Submission
+                  </div>
+                  <div class="pub-authors"><strong>Anonymous</strong></div>
                   <div class="pub-venue">JBHI (under review), 2026</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous<sup>†</sup></strong></div>
-                  <div class="pub-venue">WACV (under review), 2027</div>
-                </li>
-                <li>
-                  <div class="pub-title">
-                    Anonymous Submission
-                  </div>
-                  <div class="pub-authors"><strong>Anonymous<sup>†</sup></strong></div>
-                  <div class="pub-venue">ACCV (under review), 2026</div>
                 </li>
               </ol>
             </div>
@@ -493,16 +513,55 @@
               <ol class="pubs">
                 <li>
                   <div class="pub-title">
+                    UniPrompt-CL: Efficient Single-Inference Continual Learning for Medical Image Classification
+                  </div>
+                  <div class="pub-authors"><strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin</div>
+                  <div class="pub-venue">WACV, 2027</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Drift-adaptive Representation Preservation for Domain-Incremental Learning
+                  </div>
+                  <div class="pub-authors">Hyunmin Kong, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                  <div class="pub-venue">ACCV, 2026</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Change Detection in Longitudinal Chest X-rays Is Readout-Limited, Not Task-Limited
+                  </div>
+                  <div class="pub-authors">Seungin Baek, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                  <div class="pub-venue">ACCV, 2026</div>
+                  <span class="pub-distinction">Oral</span>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Spectral Descriptor Conditioning: Efficient and Interpretable All-in-One Image Restoration via Polar Frequency Signatures
+                  </div>
+                  <div class="pub-authors">Jungwoo Bae, <strong>Gyutae Oh</strong>, Hyunmin Kong, Jitae Shin</div>
+                  <div class="pub-venue">ACCV, 2026</div>
+                </li>
+                <li>
+                  <div class="pub-title">
+                    Causal Representation-Based Personalized Federated Learning with Causal Graph Consensus for Medical Imaging
+                  </div>
+                  <div class="pub-authors">Wooseok Shin, Zhiqiang Shen, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                  <div class="pub-venue">Electronics, 15(10), 1983, May 7, 2026</div>
+                <div class="pub-links">
+                    <a class="pill" href="https://doi.org/10.3390/electronics15101983" target="_blank" rel="noreferrer">Paper</a>
+                </div>
+                </li>
+                <li>
+                  <div class="pub-title">
                     Routing Prompts Across Layers: A Global Memory Module for Prompt-Based Continual Learning
                   </div>
-                  <div class="pub-authors"><strong>Gyutae Oh</strong>, Jitae Shin</div>
+                  <div class="pub-authors"><strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin</div>
                   <div class="pub-venue">International Conference on Computer Research and Development (ICCRD), January 24, 2026</div>
                 </li>
                 <li>
                   <div class="pub-title">
                     Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy
                   </div>
-                  <div class="pub-authors"><strong>G Oh<sup>†</sup></strong>, Y Won<sup>†</sup>, D Lim, J Shin<sup>*</sup></div>
+                  <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, Y Won, D Lim, J Shin</div>
                   <div class="pub-venue">International Workshop on Ophthalmic Medical Image Analysis (MICCAI 2025 Workshop), 2025</div>
                 <div class="pub-links">
                     <a class="pill" href="https://link.springer.com/chapter/10.1007/978-3-032-10351-2_3" target="_blank" rel="noreferrer">Paper</a>
@@ -513,7 +572,7 @@
                   <div class="pub-title">
                     Multi-Head CNN-Attention Prompt Pools: Strengthening Prompt Combination and Contextual Insight for Domain Adaptation
                   </div>
-                  <div class="pub-authors"><strong>G Oh</strong>, J Shin<sup>*</sup></div>
+                  <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, J Shin</div>
                   <div class="pub-venue">International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC), 2025</div>
                 <div class="pub-links">
                     <a class="pill" href="https://ieeexplore.ieee.org/abstract/document/11137692" target="_blank" rel="noreferrer">Paper</a>
@@ -523,7 +582,7 @@
                   <div class="pub-title">
                     Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection
                   </div>
-                  <div class="pub-authors"><strong>G Oh</strong>, J Shin<sup>*</sup></div>
+                  <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, J Shin</div>
                   <div class="pub-venue">IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia), 2024</div>
                 <div class="pub-links">
                     <a class="pill" href="https://ieeexplore.ieee.org/abstract/document/10773978" target="_blank" rel="noreferrer">Paper</a>
@@ -533,7 +592,7 @@
                   <div class="pub-title">
                     Hyperspectral Image Augmentation Technique for the Classification of Diabetic Retinopathy
                   </div>
-                  <div class="pub-authors"><strong>G Oh</strong>, J Shin<sup>*</sup></div>
+                  <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, J Shin</div>
                   <div class="pub-venue">International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC), 2024</div>
                 <div class="pub-links">
                     <a class="pill" href="https://ieeexplore.ieee.org/abstract/document/10628233" target="_blank" rel="noreferrer">Paper</a>
@@ -543,7 +602,7 @@
                   <div class="pub-title">
                     Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG
                   </div>
-                  <div class="pub-authors"><strong>G Oh<sup>†</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak<sup>*</sup></div>
+                  <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak</div>
                   <div class="pub-venue">Proceedings of the Korean Society of Computer Information Conference, 2023</div>
                 <div class="pub-links">
                     <a class="pill" href="https://www.koreascience.kr/article/CFKO202319254420068.page" target="_blank" rel="noreferrer">Paper</a>
@@ -553,7 +612,7 @@
                   <div class="pub-title">
                     Identity-CBAM ResNet 기반 얼굴 감정 식별 모듈
                   </div>
-                  <div class="pub-authors"><strong>오규태</strong>, 김인기, 김범준, 곽정환</div>
+                  <div class="pub-authors"><strong>오규태<sup>*</sup></strong>, 김인기, 김범준, 곽정환</div>
                   <div class="pub-venue">한국정보처리학회 학술대회논문집 29 (2), 2022</div>
                 <div class="pub-links">
                     <a class="pill" href="https://kiss.kstudy.com/Detail/Ar?key=3988480" target="_blank" rel="noreferrer">Paper</a>

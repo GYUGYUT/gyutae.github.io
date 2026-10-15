@@ -10,310 +10,195 @@
     />
     <style>
       :root {
-        --page: #f6f1e8;
-        --paper: #fffdfa;
-        --ink: #1a2530;
-        --muted: #5f6e7b;
-        --line: #d6cec1;
-        --strong: #1f6f66;
-        --accent: #cb944f;
+        --page: #edf2fb;
+        --paper: #ffffff;
+        --ink: #101b33;
+        --muted: #61718b;
+        --line: #dce4f1;
+        --blue: #3157f6;
+        --blue-soft: #e8eeff;
+        --navy: #101d39;
+        --lime: #d5f46a;
       }
-
-      * {
-        box-sizing: border-box;
-      }
-
+      * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: "Pretendard", "SUIT", "Helvetica Neue", Arial, sans-serif;
+        background: var(--page);
         color: var(--ink);
-        background:
-          radial-gradient(circle at top left, rgba(31, 111, 102, 0.1), transparent 24%),
-          linear-gradient(180deg, rgba(203, 148, 79, 0.08), transparent 18%),
-          var(--page);
-        line-height: 1.4;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.44;
       }
-
-      .page {
-        width: min(960px, calc(100% - 32px));
-        margin: 24px auto;
-        padding: 32px 36px 40px;
-        background: var(--paper);
-        border: 1px solid rgba(26, 37, 48, 0.08);
-        box-shadow: 0 20px 60px rgba(26, 37, 48, 0.1);
-      }
-
+      a { color: inherit; }
       .actions {
         width: min(960px, calc(100% - 32px));
         margin: 24px auto 0;
         display: flex;
         justify-content: flex-end;
       }
-
       .print-button {
-        appearance: none;
         border: 0;
-        border-radius: 999px;
+        border-radius: 9px;
         padding: 11px 16px;
-        background: linear-gradient(135deg, var(--strong), var(--accent));
+        background: var(--blue);
         color: #fff;
-        font: inherit;
-        font-size: 13px;
-        font-weight: 700;
+        font: 700 13px "Helvetica Neue", Arial, sans-serif;
         cursor: pointer;
-        box-shadow: 0 14px 32px rgba(31, 111, 102, 0.18);
       }
-
+      .page {
+        width: min(960px, calc(100% - 32px));
+        margin: 16px auto 32px;
+        padding: 28px 32px 32px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: var(--paper);
+        box-shadow: 0 25px 65px rgba(22, 41, 83, 0.09);
+      }
       .topbar {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 24px;
-        padding-bottom: 18px;
-        border-bottom: 2px solid var(--ink);
+        gap: 22px;
+        padding: 25px 28px;
+        border-radius: 11px;
+        background: var(--navy);
+        color: #fff;
       }
-
       h1 {
         margin: 0;
-        font-size: 34px;
-        letter-spacing: 0;
+        font-size: 38px;
+        line-height: 1.04;
+        letter-spacing: -0.055em;
+        white-space: nowrap;
       }
-
       .headline {
-        margin-top: 8px;
-        color: var(--strong);
-        font-weight: 700;
-        font-size: 14px;
+        margin-top: 10px;
+        color: var(--lime);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
-
       .contact {
+        color: #cad6ee;
+        font-size: 11px;
+        line-height: 1.48;
         text-align: right;
-        font-size: 13px;
-        color: var(--muted);
       }
-
-      .contact a {
-        color: inherit;
-        text-decoration: none;
-      }
-
+      .contact a { color: inherit; text-decoration: none; }
       .summary {
-        margin: 18px 0 10px;
-        font-size: 15px;
-        color: var(--ink);
+        margin: 23px 0 0;
+        padding: 1px 0 1px 18px;
+        border-left: 3px solid var(--blue);
+        font-size: 14px;
+        line-height: 1.55;
       }
-
-      .summary strong {
-        color: var(--strong);
-      }
-
+      .summary strong { color: var(--blue); }
       .grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 30px;
-        margin-top: 18px;
+        grid-template-columns: 1.16fr 0.84fr;
+        gap: 28px;
+        margin-top: 10px;
       }
-
-      section {
-        margin-top: 18px;
-      }
-
+      section { margin-top: 20px; }
       h2 {
-        margin: 0 0 10px;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 0.14em;
-        color: var(--strong);
-      }
-
-      .rule {
-        height: 1px;
-        background: var(--line);
-        margin-bottom: 10px;
-      }
-
-      .item {
-        margin-top: 0;
-        padding: 0 0 10px;
-      }
-
-      .item + .item {
-        border-top: 1px solid rgba(214, 206, 193, 0.7);
-        padding-top: 10px;
-      }
-
-      .row {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
-      .title {
-        font-weight: 800;
-        letter-spacing: 0;
-      }
-
-      .date {
-        white-space: nowrap;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .meta,
-      .desc,
-      .list,
-      .small {
-        margin-top: 4px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      .list {
-        margin: 6px 0 0;
-        padding-left: 18px;
-      }
-
-      .list li + li {
-        margin-top: 4px;
-      }
-
-      .compact {
-        display: grid;
-        gap: 10px;
-      }
-
-      .badge-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-
-      .badge {
-        padding: 4px 8px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
+        margin: 0 0 8px;
+        color: var(--blue);
         font-size: 11px;
-        font-weight: 700;
-        color: var(--muted);
-        background: rgba(31, 111, 102, 0.04);
-      }
-
-      .pub-title {
         font-weight: 800;
-        letter-spacing: 0;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
       }
-
-      .pub-authors {
-        margin-top: 3px;
-        font-size: 12px;
-      }
-
-      .pub-venue {
-        margin-top: 2px;
-        font-size: 12px;
-        color: var(--muted);
-      }
-
-      .links {
-        margin-top: 4px;
-        font-size: 12px;
-      }
-
-      .links a {
-        color: var(--strong);
-        text-decoration: none;
-        margin-right: 10px;
-      }
-
-      .compact .item {
-        padding-bottom: 10px;
-      }
-
-      .compact .item + .item {
-        padding-top: 10px;
-      }
-
-      .pub-list {
-        gap: 8px;
-      }
-
-      .pub-list .item {
-        padding-bottom: 8px;
+      .rule { height: 1px; margin-bottom: 9px; background: var(--line); }
+      .item {
+        padding: 0 0 9px;
         break-inside: avoid;
         page-break-inside: avoid;
       }
-
-      .pub-list .item + .item {
-        padding-top: 8px;
-      }
-
-      .pub-list .pub-title {
-        font-size: 12.5px;
-        line-height: 1.3;
-      }
-
-      .pub-list .pub-authors,
-      .pub-list .pub-venue,
-      .pub-list .links {
-        font-size: 11.5px;
-        line-height: 1.25;
-      }
-
-      .foot {
-        margin-top: 20px;
-        padding-top: 12px;
+      .item + .item {
+        padding-top: 9px;
         border-top: 1px solid var(--line);
-        font-size: 11px;
-        color: var(--muted);
       }
-
+      .row { display: flex; align-items: baseline; justify-content: space-between; gap: 9px; }
+      .title { font-size: 13px; font-weight: 800; line-height: 1.34; }
+      .date { flex: none; color: var(--muted); font-size: 10px; font-weight: 700; white-space: nowrap; }
+      .meta, .desc, .list, .small {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.42;
+      }
+      .list { margin: 6px 0 0; padding-left: 18px; }
+      .list li + li { margin-top: 3px; }
+      .compact { display: grid; gap: 0; }
+      .badge-row { display: flex; flex-wrap: wrap; gap: 5px; }
+      .badge {
+        padding: 4px 7px;
+        border-radius: 5px;
+        background: var(--blue-soft);
+        color: #2342bd;
+        font-size: 10px;
+        font-weight: 700;
+      }
+      .pub-title { font-weight: 800; line-height: 1.32; }
+      .pub-authors { margin-top: 3px; font-size: 10.5px; }
+      .pub-venue { margin-top: 2px; color: var(--muted); font-size: 10.5px; }
+      .links { margin-top: 4px; font-size: 10.5px; }
+      .links a { margin-right: 10px; color: var(--blue); text-decoration: none; font-weight: 700; }
+      .pub-list .item { padding-left: 10px; border-left: 2px solid var(--blue-soft); }
+      .pub-list .item + .item { padding-top: 10px; }
+      .pub-list .item:first-child { border-left-color: var(--blue); }
+      .pub-list .item.oral-highlight {
+        margin: 2px 0;
+        padding: 7px 10px;
+        border-left-color: var(--blue);
+        border-radius: 0 5px 5px 0;
+        background: var(--blue-soft);
+      }
+      .pub-list .pub-title { font-size: 11.3px; }
+      .pub-list .pub-authors, .pub-list .pub-venue, .pub-list .links {
+        font-size: 10px;
+        line-height: 1.32;
+      }
+      .foot {
+        margin-top: 18px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 10px;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 13mm 15mm;
+        @bottom-right {
+          content: counter(page) " / " counter(pages);
+          color: #8998ae;
+          font: 9px "Helvetica Neue", Arial, sans-serif;
+        }
+      }
       @media print {
-        body {
-          background: #fff;
-        }
-
-        .actions {
-          display: none;
-        }
-
+        body { background: #fff; }
+        .actions { display: none; }
         .page {
           width: auto;
           margin: 0;
-          padding: 20px 24px 24px;
+          padding: 0;
           border: 0;
+          border-radius: 0;
           box-shadow: none;
         }
+        .topbar { padding: 21px 23px; }
+        section { margin-top: 15px; }
+        h2 { break-after: avoid; }
+        .rule { break-after: avoid; }
+        .foot { margin-top: 10px; }
       }
-
       @media (max-width: 760px) {
-        .actions {
-          width: min(960px, calc(100% - 20px));
-          margin-top: 16px;
-        }
-
-        .page {
-          padding: 24px 20px 28px;
-        }
-
-        .topbar,
-        .row,
-        .grid {
-          display: block;
-        }
-
-        .contact {
-          margin-top: 12px;
-          text-align: left;
-        }
-
-        .date {
-          margin-top: 4px;
-          display: block;
-        }
+        .page { width: min(960px, calc(100% - 20px)); padding: 18px; }
+        .actions { width: min(960px, calc(100% - 20px)); }
+        .topbar, .row, .grid { display: block; }
+        .contact { margin-top: 16px; text-align: left; }
+        .date { display: block; margin-top: 3px; }
       }
     </style>
   </head>
@@ -354,6 +239,7 @@
                 <div class="title">Sungkyunkwan University, Ph.D. in Electrical and Computer Engineering</div>
                 <div class="date">Feb 2026 – Present</div>
               </div>
+              <div class="meta">GPA: 4.5/4.5</div>
             </div>
             <div class="item">
               <div class="row">
@@ -405,45 +291,46 @@
           <section>
             <h2>Selected Publications</h2>
             <div class="rule"></div>
-            <div class="small">† First author, * Corresponding author</div>
+            <div class="small">* First author</div>
             <div class="compact pub-list">
               <!-- generated-cv-selected-publications:start -->
               <div class="item">
                 <div class="pub-title">
+                  UniPrompt-CL: Efficient Single-Inference Continual Learning for Medical Image Classification
+                </div>
+                <div class="pub-authors"><strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin</div>
+                <div class="pub-venue">WACV, 2027</div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
+                  Drift-adaptive Representation Preservation for Domain-Incremental Learning
+                </div>
+                <div class="pub-authors">Hyunmin Kong, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                <div class="pub-venue">ACCV, 2026</div>
+              </div>
+              <div class="item oral-highlight">
+                <div class="pub-title">
+                  Change Detection in Longitudinal Chest X-rays Is Readout-Limited, Not Task-Limited
+                </div>
+                <div class="pub-authors">Seungin Baek, <strong>Gyutae Oh</strong>, Jitae Shin</div>
+                <div class="pub-venue">ACCV, 2026 · Oral</div>
+              </div>
+              <div class="item">
+                <div class="pub-title">
                   Routing Prompts Across Layers: A Global Memory Module for Prompt-Based Continual Learning
                 </div>
-                <div class="pub-authors"><strong>Gyutae Oh</strong>, Jitae Shin</div>
+                <div class="pub-authors"><strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin</div>
                 <div class="pub-venue">International Conference on Computer Research and Development (ICCRD), January 24, 2026</div>
               </div>
               <div class="item">
                 <div class="pub-title">
                   Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy
                 </div>
-                <div class="pub-authors"><strong>G Oh<sup>†</sup></strong>, Y Won<sup>†</sup>, D Lim, J Shin<sup>*</sup></div>
+                <div class="pub-authors"><strong>G Oh<sup>*</sup></strong>, Y Won, D Lim, J Shin</div>
                 <div class="pub-venue">International Workshop on Ophthalmic Medical Image Analysis (MICCAI 2025 Workshop), 2025</div>
                 <div class="links">
                   <a href="https://link.springer.com/chapter/10.1007/978-3-032-10351-2_3">Paper</a>
                   <a href="https://github.com/GYUGYUT/Multimodal-Fusion-Framework-Using-Contrastive-Learning-for-Exposure-Keratopathy">Code</a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="pub-title">
-                  Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection
-                </div>
-                <div class="pub-authors"><strong>G Oh</strong>, J Shin<sup>*</sup></div>
-                <div class="pub-venue">IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia), 2024</div>
-                <div class="links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/10773978">Paper</a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="pub-title">
-                  Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG
-                </div>
-                <div class="pub-authors"><strong>G Oh<sup>†</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak<sup>*</sup></div>
-                <div class="pub-venue">Proceedings of the Korean Society of Computer Information Conference, 2023</div>
-                <div class="links">
-                  <a href="https://www.koreascience.kr/article/CFKO202319254420068.page">Paper</a>
                 </div>
               </div>
 <!-- generated-cv-selected-publications:end -->
@@ -455,19 +342,15 @@
             <div class="rule"></div>
 <!-- generated-cv-under-review:start -->
             <div class="item">
-              <div class="title">AAAI 2027</div>
+              <div class="title">CVPR 2027</div>
+              <div class="small">3 anonymous submissions under review</div>
+            </div>
+            <div class="item">
+              <div class="title">ICLR 2027</div>
               <div class="small">1 anonymous submission under review</div>
             </div>
             <div class="item">
               <div class="title">JBHI 2026</div>
-              <div class="small">1 anonymous submission under review</div>
-            </div>
-            <div class="item">
-              <div class="title">WACV 2027</div>
-              <div class="small">1 anonymous submission under review</div>
-            </div>
-            <div class="item">
-              <div class="title">ACCV 2026</div>
               <div class="small">1 anonymous submission under review</div>
             </div>
 <!-- generated-cv-under-review:end -->
@@ -478,12 +361,22 @@
             <div class="rule"></div>
             <div class="item">
               <div class="row">
+                <div class="title">NRF Core Research: Adaptive State Inference &amp; Real-Time Monitoring of Short-Term Deterioration</div>
+                <div class="date">2026.09 – 2028.09</div>
+              </div>
+              <div class="meta">National Research Foundation of Korea (NRF)</div>
+              <div class="desc">
+                Developing adaptive inference from partially available multimodal data and real-time monitoring of short-term deterioration.
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
                 <div class="title">Exposure Keratitis Diagnosis & Severity Prediction (Year 2)</div>
-                <div class="date">2025.10 – Present</div>
+                <div class="date">2025.10 – 2026.10</div>
               </div>
               <div class="meta">Sungkyunkwan University · Kangbuk Samsung Hospital collaboration</div>
               <div class="desc">
-                Extending multimodal medical AI research toward model compression and clinically practical deployment.
+                Completed the second phase of research focused on model compression and performance improvements for practical use.
               </div>
             </div>
             <div class="item">
@@ -494,16 +387,6 @@
               <div class="desc">
                 Fundus-image-based multi-disease screening project with cross-lab and hospital collaboration; selected
                 as a Top 100 team out of approximately 500 teams.
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="title">Exposure Keratitis Diagnosis & Severity Prediction (Year 1)</div>
-                <div class="date">2024.10 – 2025.10</div>
-              </div>
-              <div class="desc">
-                Developed multimodal AI models for exposure keratitis diagnosis and severity prediction from anterior
-                segment photographs, leading to a workshop publication and a domestic patent application.
               </div>
             </div>
           </section>
@@ -529,8 +412,8 @@
             <h2>Research Outputs</h2>
             <div class="rule"></div>
             <div class="item">
-              <div class="title">11 total papers</div>
-              <div class="small">4 preprints · 7 peer-reviewed publications</div>
+              <div class="title">17 total papers</div>
+              <div class="small">5 preprints · 12 peer-reviewed publications</div>
             </div>
             <div class="item">
               <div class="title">1 patent</div>
@@ -618,10 +501,11 @@
             </div>
 <!-- generated-cv-services:end -->
           </section>
+
         </div>
       </div>
 
-      <div class="foot">Updated from portfolio content on March 19, 2026.</div>
+      <div class="foot">Updated from portfolio content on October 16, 2026.</div>
     </main>
   </body>
 </html>

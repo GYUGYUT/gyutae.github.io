@@ -1,13 +1,46 @@
 {
   "publications": [
     {
-      "id": "residual-sodap-2026",
+      "id": "anonymous-cvpr-2027-1",
       "type": "preprint",
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
-      "venue": "AAAI (under review)",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "CVPR (under review)",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
+      "id": "anonymous-cvpr-2027-2",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "CVPR (under review)",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
+      "id": "anonymous-cvpr-2027-3",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "CVPR (under review)",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
+      "id": "anonymous-iclr-2027-1",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Anonymous</strong>",
+      "venue": "ICLR (under review)",
       "links": [],
       "selectedForCv": false
     },
@@ -17,20 +50,66 @@
       "underReview": true,
       "year": 2026,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
+      "authorsHtml": "<strong>Anonymous</strong>",
       "venue": "JBHI (under review)",
       "links": [],
       "selectedForCv": false
     },
     {
-      "id": "anonymous-wacv-under-review-2027",
-      "type": "preprint",
-      "underReview": true,
+      "id": "uniprompt-cl-wacv-2027",
+      "type": "publication",
       "year": 2027,
-      "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
-      "venue": "WACV (under review)",
+      "title": "UniPrompt-CL: Efficient Single-Inference Continual Learning for Medical Image Classification",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin",
+      "venue": "WACV",
       "links": [],
+      "selectedForCv": true
+    },
+    {
+      "id": "drift-adaptive-representation-accv-2026",
+      "type": "publication",
+      "year": 2026,
+      "title": "Drift-adaptive Representation Preservation for Domain-Incremental Learning",
+      "authorsHtml": "Hyunmin Kong, <strong>Gyutae Oh</strong>, Jitae Shin",
+      "venue": "ACCV",
+      "links": [],
+      "selectedForCv": true
+    },
+    {
+      "id": "longitudinal-chest-xray-change-detection-accv-2026",
+      "type": "publication",
+      "year": 2026,
+      "title": "Change Detection in Longitudinal Chest X-rays Is Readout-Limited, Not Task-Limited",
+      "authorsHtml": "Seungin Baek, <strong>Gyutae Oh</strong>, Jitae Shin",
+      "venue": "ACCV",
+      "distinction": "Oral",
+      "links": [],
+      "selectedForCv": true
+    },
+    {
+      "id": "spectral-descriptor-conditioning-accv-2026",
+      "type": "publication",
+      "year": 2026,
+      "title": "Spectral Descriptor Conditioning: Efficient and Interpretable All-in-One Image Restoration via Polar Frequency Signatures",
+      "authorsHtml": "Jungwoo Bae, <strong>Gyutae Oh</strong>, Hyunmin Kong, Jitae Shin",
+      "venue": "ACCV",
+      "links": [],
+      "selectedForCv": false
+    },
+    {
+      "id": "carpe-fl-electronics-2026",
+      "type": "publication",
+      "year": 2026,
+      "date": "May 7, 2026",
+      "title": "Causal Representation-Based Personalized Federated Learning with Causal Graph Consensus for Medical Imaging",
+      "authorsHtml": "Wooseok Shin, Zhiqiang Shen, <strong>Gyutae Oh</strong>, Jitae Shin",
+      "venue": "Electronics, 15(10), 1983",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://doi.org/10.3390/electronics15101983"
+        }
+      ],
       "selectedForCv": false
     },
     {
@@ -39,28 +118,17 @@
       "year": 2026,
       "date": "January 24, 2026",
       "title": "Routing Prompts Across Layers: A Global Memory Module for Prompt-Based Continual Learning",
-      "authorsHtml": "<strong>Gyutae Oh</strong>, Jitae Shin",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin",
       "venue": "International Conference on Computer Research and Development (ICCRD)",
       "links": [],
       "selectedForCv": true
-    },
-    {
-      "id": "uniprompt-cl-2025",
-      "type": "preprint",
-      "underReview": true,
-      "year": 2026,
-      "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous<sup>†</sup></strong>",
-      "venue": "ACCV (under review)",
-      "links": [],
-      "selectedForCv": false
     },
     {
       "id": "ek-contrastive-2025",
       "type": "publication",
       "year": 2025,
       "title": "Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy",
-      "authorsHtml": "<strong>G Oh<sup>†</sup></strong>, Y Won<sup>†</sup>, D Lim, J Shin<sup>*</sup>",
+      "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, Y Won, D Lim, J Shin",
       "venue": "International Workshop on Ophthalmic Medical Image Analysis (MICCAI 2025 Workshop)",
       "links": [
         {
@@ -79,7 +147,7 @@
       "type": "publication",
       "year": 2025,
       "title": "Multi-Head CNN-Attention Prompt Pools: Strengthening Prompt Combination and Contextual Insight for Domain Adaptation",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
+      "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, J Shin",
       "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
       "links": [
         {
@@ -94,7 +162,7 @@
       "type": "publication",
       "year": 2024,
       "title": "Patch Core++: Augmenting Coreset for Superior Industrial Anomaly Detection",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
+      "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, J Shin",
       "venue": "IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)",
       "links": [
         {
@@ -102,14 +170,14 @@
           "url": "https://ieeexplore.ieee.org/abstract/document/10773978"
         }
       ],
-      "selectedForCv": true
+      "selectedForCv": false
     },
     {
       "id": "hyperspectral-dr-2024",
       "type": "publication",
       "year": 2024,
       "title": "Hyperspectral Image Augmentation Technique for the Classification of Diabetic Retinopathy",
-      "authorsHtml": "<strong>G Oh</strong>, J Shin<sup>*</sup>",
+      "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, J Shin",
       "venue": "International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
       "links": [
         {
@@ -124,7 +192,7 @@
       "type": "publication",
       "year": 2023,
       "title": "Feature Ensemble-based Wolff Parkinson White Syndrome classification through ECG",
-      "authorsHtml": "<strong>G Oh<sup>†</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak<sup>*</sup>",
+      "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, I Kim, B Kim, Y Jeon, J Gwak",
       "venue": "Proceedings of the Korean Society of Computer Information Conference",
       "links": [
         {
@@ -132,14 +200,14 @@
           "url": "https://www.koreascience.kr/article/CFKO202319254420068.page"
         }
       ],
-      "selectedForCv": true
+      "selectedForCv": false
     },
     {
       "id": "identity-cbam-2022",
       "type": "publication",
       "year": 2022,
       "title": "Identity-CBAM ResNet 기반 얼굴 감정 식별 모듈",
-      "authorsHtml": "<strong>오규태</strong>, 김인기, 김범준, 곽정환",
+      "authorsHtml": "<strong>오규태<sup>*</sup></strong>, 김인기, 김범준, 곽정환",
       "venue": "한국정보처리학회 학술대회논문집 29 (2)",
       "links": [
         {

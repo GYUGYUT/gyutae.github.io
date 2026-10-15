@@ -32,9 +32,12 @@ function renderLinks(links, className = "pill") {
 }
 
 function publicationMeta(item) {
-  if (item.date) return `${item.venue}, ${item.date}`;
-  if (item.year) return `${item.venue}, ${item.year}`;
-  return item.venue;
+  const venueAndDate = item.date
+    ? `${item.venue}, ${item.date}`
+    : item.year
+      ? `${item.venue}, ${item.year}`
+      : item.venue;
+  return item.distinction ? `${venueAndDate} · ${item.distinction}` : venueAndDate;
 }
 
 function underReviewVenueLabel(item) {
@@ -45,13 +48,16 @@ function renderPublicationItem(item, indent = "                ") {
   const links = item.links?.length
     ? `\n${indent}<div class="pub-links">\n${renderLinks(item.links)}\n${indent}</div>`
     : "";
+  const distinction = item.distinction
+    ? `\n${indent}  <span class="pub-distinction">${item.distinction}</span>`
+    : "";
 
   return `${indent}<li>
 ${indent}  <div class="pub-title">
 ${indent}    ${item.title}
 ${indent}  </div>
 ${indent}  <div class="pub-authors">${item.authorsHtml}</div>
-${indent}  <div class="pub-venue">${publicationMeta(item)}</div>${links}
+${indent}  <div class="pub-venue">${publicationMeta({ ...item, distinction: null })}</div>${distinction}${links}
 ${indent}</li>`;
 }
 
@@ -175,7 +181,8 @@ function renderCvSelectedPublications() {
             .map((link) => `                  <a href="${link.url}">${link.label}</a>`)
             .join("\n")}\n                </div>`
         : "";
-      return `              <div class="item">
+      const itemClass = item.distinction ? "item oral-highlight" : "item";
+      return `              <div class="${itemClass}">
                 <div class="pub-title">
                   ${item.title}
                 </div>
