@@ -134,7 +134,7 @@ button { font: inherit; }
 .nav a:hover { color: var(--ink); text-decoration: none; }
 .nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
 .header-actions { display: flex; align-items: center; gap: 8px; }
-.menu-toggle { display: none; width: 44px; padding: 0; }
+.header-actions .menu-toggle { display: none; width: 44px; padding: 0; }
 .menu-icon { display: grid; gap: 4px; }
 .menu-icon span { display: block; width: 17px; height: 2px; border-radius: 2px; background: currentColor; transition: transform 180ms ease, opacity 180ms ease; }
 .menu-toggle[aria-expanded="true"] .menu-icon span:first-child { transform: translateY(6px) rotate(45deg); }
