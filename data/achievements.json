@@ -6,10 +6,12 @@
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "CVPR (under review)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "CVPR",
+      "category": "conference"
     },
     {
       "id": "anonymous-cvpr-2027-2",
@@ -17,10 +19,12 @@
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "CVPR (under review)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "CVPR",
+      "category": "conference"
     },
     {
       "id": "anonymous-cvpr-2027-3",
@@ -28,10 +32,12 @@
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "CVPR (under review)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "CVPR",
+      "category": "conference"
     },
     {
       "id": "anonymous-iclr-2027-1",
@@ -39,21 +45,26 @@
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "ICLR (under review)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "ICLR",
+      "category": "conference"
     },
     {
-      "id": "anonymous-jbhi-under-review-2026",
+      "id": "broad-beam-vit-jbhi-under-review",
       "type": "preprint",
       "underReview": true,
       "year": 2026,
-      "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Anonymous</strong>",
-      "venue": "JBHI (under review)",
+      "title": "Broad-Beam-Anchored Auxiliary-Optional Vision Transformer for Screening and Differential Diagnosis of Exposure Keratopathy and Infectious Keratitis",
+      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong> et al.",
+      "venue": "IEEE Journal of Biomedical and Health Informatics (under review)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "IEEE JBHI",
+      "note": "Co-first author · SCIE, JCR Q1",
+      "category": "journal"
     },
     {
       "id": "uniprompt-cl-wacv-2027",
@@ -61,9 +72,16 @@
       "year": 2027,
       "title": "UniPrompt-CL: Efficient Single-Inference Continual Learning for Medical Image Classification",
       "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin",
-      "venue": "WACV",
-      "links": [],
-      "selectedForCv": true
+      "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/GYUGYUT/UniPrompt-CL"
+        }
+      ],
+      "selectedForCv": true,
+      "venueShort": "WACV",
+      "category": "conference"
     },
     {
       "id": "drift-adaptive-representation-accv-2026",
@@ -71,9 +89,11 @@
       "year": 2026,
       "title": "Drift-adaptive Representation Preservation for Domain-Incremental Learning",
       "authorsHtml": "Hyunmin Kong, <strong>Gyutae Oh</strong>, Jitae Shin",
-      "venue": "ACCV",
+      "venue": "Asian Conference on Computer Vision (ACCV)",
       "links": [],
-      "selectedForCv": true
+      "selectedForCv": true,
+      "venueShort": "ACCV",
+      "category": "conference"
     },
     {
       "id": "longitudinal-chest-xray-change-detection-accv-2026",
@@ -81,10 +101,12 @@
       "year": 2026,
       "title": "Change Detection in Longitudinal Chest X-rays Is Readout-Limited, Not Task-Limited",
       "authorsHtml": "Seungin Baek, <strong>Gyutae Oh</strong>, Jitae Shin",
-      "venue": "ACCV",
+      "venue": "Asian Conference on Computer Vision (ACCV)",
       "distinction": "Oral",
       "links": [],
-      "selectedForCv": true
+      "selectedForCv": true,
+      "venueShort": "ACCV",
+      "category": "conference"
     },
     {
       "id": "spectral-descriptor-conditioning-accv-2026",
@@ -92,9 +114,11 @@
       "year": 2026,
       "title": "Spectral Descriptor Conditioning: Efficient and Interpretable All-in-One Image Restoration via Polar Frequency Signatures",
       "authorsHtml": "Jungwoo Bae, <strong>Gyutae Oh</strong>, Hyunmin Kong, Jitae Shin",
-      "venue": "ACCV",
+      "venue": "Asian Conference on Computer Vision (ACCV)",
       "links": [],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "ACCV",
+      "category": "conference"
     },
     {
       "id": "carpe-fl-electronics-2026",
@@ -110,7 +134,10 @@
           "url": "https://doi.org/10.3390/electronics15101983"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "Electronics",
+      "note": "SCIE · JCR Q2",
+      "category": "journal"
     },
     {
       "id": "routing-prompts-across-layers-2026",
@@ -121,7 +148,9 @@
       "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>, Jitae Shin",
       "venue": "International Conference on Computer Research and Development (ICCRD)",
       "links": [],
-      "selectedForCv": true
+      "selectedForCv": true,
+      "venueShort": "ICCRD",
+      "category": "conference"
     },
     {
       "id": "ek-contrastive-2025",
@@ -129,7 +158,7 @@
       "year": 2025,
       "title": "Multimodal Fusion Framework Using Contrastive Learning for Exposure Keratopathy",
       "authorsHtml": "<strong>G Oh<sup>*</sup></strong>, Y Won, D Lim, J Shin",
-      "venue": "International Workshop on Ophthalmic Medical Image Analysis (MICCAI 2025 Workshop)",
+      "venue": "International Workshop on Ophthalmic Medical Image Analysis (OMIA), MICCAI 2025 Workshop, LNCS 16209",
       "links": [
         {
           "label": "Paper",
@@ -140,7 +169,9 @@
           "url": "https://github.com/GYUGYUT/Multimodal-Fusion-Framework-Using-Contrastive-Learning-for-Exposure-Keratopathy"
         }
       ],
-      "selectedForCv": true
+      "selectedForCv": true,
+      "venueShort": "MICCAI-W",
+      "category": "conference"
     },
     {
       "id": "multihead-prompt-2025",
@@ -155,7 +186,9 @@
           "url": "https://ieeexplore.ieee.org/abstract/document/11137692"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "ITC-CSCC",
+      "category": "conference"
     },
     {
       "id": "patch-core-2024",
@@ -170,7 +203,9 @@
           "url": "https://ieeexplore.ieee.org/abstract/document/10773978"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "ICCE-Asia",
+      "category": "conference"
     },
     {
       "id": "hyperspectral-dr-2024",
@@ -185,7 +220,9 @@
           "url": "https://ieeexplore.ieee.org/abstract/document/10628233"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "ITC-CSCC",
+      "category": "conference"
     },
     {
       "id": "wpw-ecg-2023",
@@ -200,7 +237,9 @@
           "url": "https://www.koreascience.kr/article/CFKO202319254420068.page"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "KSCI",
+      "category": "domestic"
     },
     {
       "id": "identity-cbam-2022",
@@ -215,16 +254,18 @@
           "url": "https://kiss.kstudy.com/Detail/Ar?key=3988480"
         }
       ],
-      "selectedForCv": false
+      "selectedForCv": false,
+      "venueShort": "KIPS",
+      "category": "domestic"
     }
   ],
   "patents": [
     {
       "title": "Device and Method for Diagnosing Exposure Keratopathy based on Multimodal Fusion Learning (Application)",
-      "metaHtml": "<strong>Application No.</strong> 10-2025-0121342 · <strong>Filed</strong> Aug 28, 2025",
+      "metaHtml": "<strong>KR</strong> 10-2025-0121342 · filed Aug 28, 2025 &nbsp;/&nbsp; <strong>PCT</strong> PCT/KR2026/011329 · filed Aug 10, 2026",
       "summaryHtml": [
         "Two-stage multimodal fusion learning framework for automatic grading of Exposure Keratopathy (EK). Trained with four ocular imaging modalities collected at a tertiary hospital (broadbeam, slit-beam, scattering, and blue-light): modality-wise features are aligned and fused during training, while inference enables modality-agnostic classification using only a single broadbeam image to implicitly leverage information from other modalities.",
-        "Achieved an average improvement of <strong>+16%p</strong> in F1 and accuracy compared to a single-modality baseline, reducing acquisition burden and improving clinical applicability."
+        "Single-image inference reaches <strong>0.841</strong> accuracy and <strong>0.838</strong> F1 on four-level severity grading — an average gain of more than <strong>+16%p</strong> over a single-modality baseline, reducing acquisition burden and improving clinical applicability."
       ],
       "selectedForCv": true
     }

@@ -1,70 +1,55 @@
 const STORAGE_KEY = "portfolio.theme";
-document.documentElement.classList.add("js");
+const root = document.documentElement;
+root.classList.add("js");
 
-function prefersReducedMotion() {
-  return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-}
+const reducedMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+const prefersReducedMotion = () => reducedMotionQuery?.matches ?? false;
 
 function getPreferredTheme() {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === "light" || saved === "dark") return saved;
-
-  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-
-  return "light";
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+  } catch {}
+  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-function setTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem(STORAGE_KEY, theme);
+function applyTheme(theme, persist = false) {
+  root.dataset.theme = theme;
+  if (!persist) return;
+  try {
+    localStorage.setItem(STORAGE_KEY, theme);
+  } catch {}
 }
 
 function wireThemeToggle() {
-  const btn = document.getElementById("themeToggle");
-  if (!btn) return;
+  const button = document.getElementById("themeToggle");
+  if (!button) return;
 
   const sync = () => {
-    const current = document.documentElement.dataset.theme || "light";
-    const next = current === "dark" ? "light" : "dark";
-    btn.setAttribute("aria-pressed", String(current === "dark"));
-    btn.setAttribute("aria-label", `Switch to ${next} mode`);
-    btn.title = `Switch to ${next} mode`;
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    button.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
+    button.setAttribute("aria-label", `Switch to ${next} mode`);
+    button.title = `Switch to ${next} mode`;
   };
 
-  btn.addEventListener("click", () => {
-    const current = document.documentElement.dataset.theme || "light";
-    setTheme(current === "dark" ? "light" : "dark");
+  button.addEventListener("click", () => {
+    applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true);
     sync();
   });
-
   sync();
-}
-
-function wireMailtoComposer() {
-  const subject = document.getElementById("msgSubject");
-  const body = document.getElementById("msgBody");
-  const link = document.getElementById("mailtoLink");
-  if (!subject || !body || !link) return;
-
-  const base = link.getAttribute("href") || "mailto:you@example.com";
-
-  const update = () => {
-    const s = encodeURIComponent(subject.value || "Hello");
-    const b = encodeURIComponent(body.value || "");
-    link.setAttribute("href", `${base}?subject=${s}&body=${b}`);
-  };
-
-  subject.addEventListener("input", update);
-  body.addEventListener("input", update);
-  update();
 }
 
 function setYear() {
   const year = document.getElementById("year");
-  if (!year) return;
-  year.textContent = String(new Date().getFullYear());
+  if (year) year.textContent = String(new Date().getFullYear());
+}
+
+function wireHeader() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const update = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+  update();
+  window.addEventListener("scroll", update, { passive: true });
 }
 
 function wireMobileMenu() {
@@ -91,14 +76,14 @@ function wireMobileMenu() {
   document.addEventListener("click", (event) => {
     if (!nav.contains(event.target) && !button.contains(event.target)) setOpen(false);
   });
-  window.matchMedia("(min-width: 1101px)").addEventListener?.("change", () => setOpen(false));
+  window.matchMedia("(min-width: 1041px)").addEventListener?.("change", () => setOpen(false));
 }
 
 function rotateHeroWord() {
   const word = document.getElementById("heroWord");
   if (!word || prefersReducedMotion()) return;
 
-  const words = ["adapts.", "remembers.", "matters."];
+  const words = ["adapts.", "remembers.", "generalizes.", "matters."];
   let index = 0;
   let changeTimer;
   const interval = window.setInterval(() => {
@@ -107,10 +92,10 @@ function rotateHeroWord() {
       index = (index + 1) % words.length;
       word.textContent = words[index];
       word.classList.remove("is-switching");
-    }, 280);
-  }, 3600);
+    }, 300);
+  }, 3200);
 
-  window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener?.("change", (event) => {
+  reducedMotionQuery?.addEventListener?.("change", (event) => {
     if (!event.matches) return;
     window.clearInterval(interval);
     window.clearTimeout(changeTimer);
@@ -119,45 +104,58 @@ function rotateHeroWord() {
   });
 }
 
-function wirePublicationCarousel() {
-  const list = document.getElementById("featuredPubs");
-  if (!list) return;
+function wireActiveNav() {
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
+  if (!links.length || !("IntersectionObserver" in window)) return;
+  const byId = new Map(links.map((link) => [link.getAttribute("href").slice(1), link]));
+  const sections = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
 
-  document.querySelectorAll("[data-carousel-direction]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = list.querySelector("li");
-      if (!card) return;
-      const gap = parseFloat(getComputedStyle(list).columnGap) || 0;
-      list.scrollBy({ left: Number(button.dataset.carouselDirection) * (card.getBoundingClientRect().width + gap), behavior: prefersReducedMotion() ? "auto" : "smooth" });
-    });
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => {
+          link.classList.remove("is-active");
+          link.removeAttribute("aria-current");
+        });
+        const active = byId.get(entry.target.id);
+        active?.classList.add("is-active");
+        active?.setAttribute("aria-current", "true");
+      });
+    },
+    { rootMargin: "-35% 0px -60% 0px" }
+  );
+  sections.forEach((section) => observer.observe(section));
 }
 
 function wireScrollReveal() {
   if (prefersReducedMotion() || !("IntersectionObserver" in window)) return;
-  const targets = document.querySelectorAll(".section-head, .featured-projects .project, .research-grid .card, .publication-featured, .honor-stat");
+  const targets = document.querySelectorAll(".stats, .section-label, .section-body > *, .contact .container > *");
   if (!targets.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.06, rootMargin: "0px 0px -6% 0px" }
+  );
 
   targets.forEach((target) => {
-    target.classList.add("reveal-target");
+    target.classList.add("reveal");
     observer.observe(target);
   });
-  requestAnimationFrame(() => document.documentElement.classList.add("motion-ready"));
+  requestAnimationFrame(() => root.classList.add("motion-ready"));
 }
 
-setTheme(getPreferredTheme());
+applyTheme(getPreferredTheme());
 wireThemeToggle();
-wireMailtoComposer();
 setYear();
+wireHeader();
 wireMobileMenu();
 rotateHeroWord();
-wirePublicationCarousel();
+wireActiveNav();
 wireScrollReveal();

@@ -36,6 +36,16 @@ When you add or edit publications, patents, scholarships, awards, certifications
 node scripts/sync-achievements.mjs
 ```
 
+Optional publication fields used by the redesigned layout:
+
+- `venueShort` — short venue tag shown as a badge (e.g. `WACV`, `ACCV`)
+- `category` — `conference`, `journal`, or `domestic` (CV grouping)
+- `note` — small annotation such as `SCIE · JCR Q1`
+- `distinction` — e.g. `Oral`
+
+The headline numbers in the hero (`.stats`) and the "Selected Work" cards are hand-written in
+`index.html`; update them when the counts change.
+
 This updates:
 
 - `index.html`
