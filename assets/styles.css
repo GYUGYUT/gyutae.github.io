@@ -154,6 +154,11 @@ sup { font-size: 0.7em; line-height: 0; }
 .status-dot {
   width: 7px; height: 7px; flex: none; border-radius: 50%;
   background: #22a06b; box-shadow: 0 0 0 4px rgba(34, 160, 107, 0.16);
+  animation: status-blink 1.6s ease-in-out infinite;
+}
+@keyframes status-blink {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 4px rgba(34, 160, 107, 0.18); }
+  50% { opacity: 0.25; box-shadow: 0 0 0 7px rgba(34, 160, 107, 0); }
 }
 .hero-name {
   margin: 0;
