@@ -125,8 +125,7 @@ function renderPublicationItem(item, indent) {
 /** Publication groups, in display order. `category` comes from data/achievements.json. */
 const PUB_GROUPS = [
   { title: "International conferences & journals", short: "international", categories: ["conference", "journal"] },
-  { title: "Workshops", short: "workshop", categories: ["workshop"] },
-  { title: "Domestic conferences", short: "domestic", categories: ["domestic"] },
+  { title: "Workshops & domestic conferences", short: "workshop / domestic", categories: ["workshop", "domestic"] },
 ];
 
 function groupedPublications() {
