@@ -1,55 +1,101 @@
 {
   "publications": [
     {
-      "id": "anonymous-cvpr-2027-1",
+      "id": "anonymous-cvpr-2027-first-1",
       "type": "preprint",
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
       "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "CVPR (under review)",
+      "venueShort": "CVPR",
+      "role": "first",
       "links": [],
       "selectedForCv": false,
-      "venueShort": "CVPR",
       "category": "conference"
     },
     {
-      "id": "anonymous-cvpr-2027-2",
+      "id": "anonymous-cvpr-2027-first-2",
       "type": "preprint",
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
       "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "CVPR (under review)",
+      "venueShort": "CVPR",
+      "role": "first",
       "links": [],
       "selectedForCv": false,
-      "venueShort": "CVPR",
       "category": "conference"
     },
     {
-      "id": "anonymous-cvpr-2027-3",
+      "id": "anonymous-cvpr-2027-co-1",
       "type": "preprint",
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
-      "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
+      "authorsHtml": "<strong>Gyutae Oh</strong> (co-author)",
       "venue": "CVPR (under review)",
+      "venueShort": "CVPR",
+      "role": "co",
       "links": [],
       "selectedForCv": false,
-      "venueShort": "CVPR",
       "category": "conference"
     },
     {
-      "id": "anonymous-iclr-2027-1",
+      "id": "anonymous-cvpr-2027-co-2",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Gyutae Oh</strong> (co-author)",
+      "venue": "CVPR (under review)",
+      "venueShort": "CVPR",
+      "role": "co",
+      "links": [],
+      "selectedForCv": false,
+      "category": "conference"
+    },
+    {
+      "id": "anonymous-cvpr-2027-co-3",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Gyutae Oh</strong> (co-author)",
+      "venue": "CVPR (under review)",
+      "venueShort": "CVPR",
+      "role": "co",
+      "links": [],
+      "selectedForCv": false,
+      "category": "conference"
+    },
+    {
+      "id": "anonymous-iclr-2027-first-1",
       "type": "preprint",
       "underReview": true,
       "year": 2027,
       "title": "Anonymous Submission",
       "authorsHtml": "<strong>Gyutae Oh<sup>*</sup></strong>",
       "venue": "ICLR (under review)",
+      "venueShort": "ICLR",
+      "role": "first",
       "links": [],
       "selectedForCv": false,
+      "category": "conference"
+    },
+    {
+      "id": "anonymous-iclr-2027-co-1",
+      "type": "preprint",
+      "underReview": true,
+      "year": 2027,
+      "title": "Anonymous Submission",
+      "authorsHtml": "<strong>Gyutae Oh</strong> (co-author)",
+      "venue": "ICLR (under review)",
       "venueShort": "ICLR",
+      "role": "co",
+      "links": [],
+      "selectedForCv": false,
       "category": "conference"
     },
     {
@@ -64,7 +110,8 @@
       "selectedForCv": false,
       "venueShort": "IEEE JBHI",
       "note": "Co-first author · SCIE, JCR Q1",
-      "category": "journal"
+      "category": "journal",
+      "role": "co-first"
     },
     {
       "id": "uniprompt-cl-wacv-2027",
@@ -81,7 +128,8 @@
       ],
       "selectedForCv": true,
       "venueShort": "WACV",
-      "category": "conference"
+      "category": "conference",
+      "note": "SCI-equivalent"
     },
     {
       "id": "drift-adaptive-representation-accv-2026",
@@ -93,7 +141,8 @@
       "links": [],
       "selectedForCv": true,
       "venueShort": "ACCV",
-      "category": "conference"
+      "category": "conference",
+      "note": "SCI-equivalent"
     },
     {
       "id": "longitudinal-chest-xray-change-detection-accv-2026",
@@ -106,7 +155,8 @@
       "links": [],
       "selectedForCv": true,
       "venueShort": "ACCV",
-      "category": "conference"
+      "category": "conference",
+      "note": "SCI-equivalent"
     },
     {
       "id": "spectral-descriptor-conditioning-accv-2026",
@@ -118,7 +168,8 @@
       "links": [],
       "selectedForCv": false,
       "venueShort": "ACCV",
-      "category": "conference"
+      "category": "conference",
+      "note": "SCI-equivalent"
     },
     {
       "id": "carpe-fl-electronics-2026",
@@ -171,7 +222,7 @@
       ],
       "selectedForCv": true,
       "venueShort": "MICCAI-W",
-      "category": "conference"
+      "category": "workshop"
     },
     {
       "id": "multihead-prompt-2025",
@@ -319,7 +370,6 @@
     {
       "title": "Advanced Data Analytics Semi-Professional (ADsP)",
       "venue": "Issued by Korea Data Agency (KDATA) · Sep 2025",
-      "extraHtml": "<strong>ID</strong>: ADsP-046012145",
       "selectedForCv": true
     }
   ],

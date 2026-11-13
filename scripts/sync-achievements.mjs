@@ -56,14 +56,23 @@ function venueLong(item) {
   return item.venue.replace(/\s*\(under review\)\s*$/i, "");
 }
 
+const ROLE_LABELS = { first: "first author", "co-first": "co-first author", co: "co-author" };
+
+function roleLabel(item) {
+  return ROLE_LABELS[item.role || "first"];
+}
+
+/** Groups double-blind submissions by venue + authorship role, e.g. ["CVPR 2027", "co-author", 3]. */
 function groupAnonymous() {
   const grouped = new Map();
   for (const item of underReview.filter(isAnonymous)) {
-    const label = `${venueLabel(item)} ${item.year}`;
-    grouped.set(label, (grouped.get(label) || 0) + 1);
+    const key = `${venueLabel(item)} ${item.year}|${roleLabel(item)}`;
+    grouped.set(key, (grouped.get(key) || 0) + 1);
   }
-  return Array.from(grouped.entries());
+  return Array.from(grouped.entries()).map(([key, count]) => [...key.split("|"), count]);
 }
+
+const underReviewFirstCount = underReview.filter((item) => (item.role || "first") !== "co").length;
 
 /** Splits "Award name (2023.11)" or "Scholarship (awarded 5 times, 2019–2023)" into title + date. */
 function splitTrailingDate(item) {
@@ -113,9 +122,28 @@ function renderPublicationItem(item, indent) {
   );
 }
 
+/** Publication groups, in display order. `category` comes from data/achievements.json. */
+const PUB_GROUPS = [
+  { title: "International conferences & journals", short: "international", categories: ["conference", "journal"] },
+  { title: "Workshops", short: "workshop", categories: ["workshop"] },
+  { title: "Domestic conferences", short: "domestic", categories: ["domestic"] },
+];
+
+function groupedPublications() {
+  return PUB_GROUPS.map((group) => ({
+    ...group,
+    items: publications.filter((item) => group.categories.includes(item.category)),
+  })).filter((group) => group.items.length);
+}
+
+function publicationSummary() {
+  return groupedPublications()
+    .map(({ short, items }) => `${items.length} ${short}`)
+    .join(" · ")
+    .concat(" papers");
+}
+
 function renderIndexAchievements() {
-  const selected = publications.filter((item) => item.selectedForCv);
-  const archive = publications.filter((item) => !item.selectedForCv);
   const titledReview = underReview.filter((item) => !isAnonymous(item));
   const anonymous = groupAnonymous();
   const i = "            ";
@@ -132,25 +160,23 @@ ${i}</ol>`
 ${i}<div class="under-review">
 ${i}  <span class="under-review-label">Double-blind</span>
 ${i}  <ul>
-${anonymous.map(([label, count]) => `${i}    <li>${label}${count > 1 ? ` <span>×${count}</span>` : ""}</li>`).join("\n")}
+${anonymous.map(([label, role, count]) => `${i}    <li>${label}${count > 1 ? ` ×${count}` : ""} <span>· ${role}</span></li>`).join("\n")}
 ${i}  </ul>
 ${i}</div>`
     : "";
 
-  return `${i}<p class="section-note">${publications.length} peer-reviewed papers · ${firstAuthorCount} first-author · ${underReview.length} under review · <sup>*</sup> first / co-first author</p>
-${i}<div class="block">
-${i}<h3 class="block-title">Selected</h3>
+  const groups = groupedPublications().map(
+    ({ title, items }) => `${i}<div class="block">
+${i}<h3 class="block-title">${title} <span class="more-count">${items.length}</span></h3>
 ${i}<ol class="pub-list">
-${selected.map((item) => renderPublicationItem(item, `${i}  `)).join("\n")}
+${items.map((item) => renderPublicationItem(item, `${i}  `)).join("\n")}
 ${i}</ol>
-${i}</div>
+${i}</div>`
+  );
+
+  return `${i}<p class="section-note">${publicationSummary()} · <sup>*</sup> first / co-first author</p>
+${groups.join("\n")}
 ${i}<div class="block">${reviewList}${anonymousStrip}
-${i}</div>
-${i}<div class="block">
-${i}<h3 class="block-title">More publications</h3>
-${i}<ol class="pub-list">
-${archive.map((item) => renderPublicationItem(item, `${i}  `)).join("\n")}
-${i}</ol>
 ${i}</div>`;
 }
 
@@ -240,14 +266,14 @@ function renderCvPublication(item, indent) {
 
 function renderCvPublications() {
   const i = "        ";
-  const groups = [
-    ["International conferences", publications.filter((item) => item.category === "conference")],
-    ["International journals", publications.filter((item) => item.category === "journal")],
-    ["Domestic conferences", publications.filter((item) => item.category === "domestic")],
-  ];
+  const groups = groupedPublications().map(({ title, items }) => [title, items]);
   const titledReview = underReview.filter((item) => !isAnonymous(item));
-  const anonymous = groupAnonymous()
-    .map(([label, count]) => (count > 1 ? `${label} (×${count})` : label))
+  const byVenue = new Map();
+  for (const [label, role, count] of groupAnonymous()) {
+    byVenue.set(label, [...(byVenue.get(label) || []), `${count} ${role.replace(" author", "-author")}`]);
+  }
+  const anonymous = Array.from(byVenue.entries())
+    .map(([label, parts]) => `${label} (${parts.join(", ")})`)
     .join(" · ");
 
   const blocks = groups
@@ -265,14 +291,14 @@ ${titledReview.map((item) => renderCvPublication(item, `${i}  `)).join("\n")}${
     anonymous
       ? `
 ${i}  <li>
-${i}    <div class="cv-title">Double-blind submissions (first author): ${anonymous}</div>
+${i}    <div class="cv-title">Double-blind submissions: ${anonymous}</div>
 ${i}    <div class="cv-venue">Domain continual learning and efficient learning — titles withheld during review</div>
 ${i}  </li>`
       : ""
   }
 ${i}</ol>`);
 
-  return `${i}<p class="cv-note">${publications.length} peer-reviewed papers (${firstAuthorCount} first-author) · ${underReview.length} under review · <sup>*</sup> first / co-first author</p>
+  return `${i}<p class="cv-note">${publicationSummary()} · <sup>*</sup> first / co-first author</p>
 ${blocks.join("\n")}`;
 }
 
