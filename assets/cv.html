@@ -77,6 +77,8 @@
       .role { margin-top: 8px; color: var(--accent); font-family: var(--mono); font-size: 8pt; letter-spacing: 0.06em; text-transform: uppercase; }
       .contact { margin: 0; padding: 0; list-style: none; text-align: right; font-size: 8.6pt; line-height: 1.6; color: var(--ink-2); }
       .contact a { color: var(--ink-2); }
+      .contact li { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
+      .contact svg { width: 9pt; height: 9pt; flex: none; color: var(--accent); }
       .summary { margin: 14px 0 0; color: var(--ink-2); font-size: 10pt; line-height: 1.6; }
       .summary strong { color: var(--ink); font-weight: 600; }
 
@@ -147,6 +149,7 @@
         .page { padding: 22px 18px; }
         .cv-header, section { grid-template-columns: 1fr; gap: 6px; }
         .contact { text-align: left; }
+        .contact li { flex-direction: row-reverse; justify-content: flex-end; }
         h1 { font-size: 38pt; }
       }
     </style>
@@ -164,10 +167,26 @@
           <div class="role">Ph.D. Student · Continual Learning &amp; Efficient Learning</div>
         </div>
         <ul class="contact">
-          <li><a href="mailto:alswo740012@g.skku.edu">alswo740012@g.skku.edu</a></li>
-          <li><a href="https://gyugyut.github.io/gyutae.github.io/">gyugyut.github.io/gyutae.github.io</a></li>
-          <li><a href="https://scholar.google.com/citations?user=2_rG1kQAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://github.com/GYUGYUT">github.com/GYUGYUT</a></li>
-          <li><a href="https://www.linkedin.com/in/gyutaetaetae">linkedin.com/in/gyutaetaetae</a></li>
+          <li>
+            <a href="mailto:alswo740012@g.skku.edu">alswo740012@g.skku.edu</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3.5 6.5 8.5 6 8.5-6" /></svg>
+          </li>
+          <li>
+            <a href="https://gyugyut.github.io/gyutae.github.io/">gyugyut.github.io/gyutae.github.io</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" /></svg>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=2_rG1kQAAAAJ&amp;hl=en">Google Scholar</a>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1.5 9.5 12 16l8-4.95V17h2V9.5L12 3Zm-6 10.3V16c0 2.2 2.7 4 6 4s6-1.8 6-4v-2.7l-6 3.7-6-3.7Z" /></svg>
+          </li>
+          <li>
+            <a href="https://github.com/GYUGYUT">github.com/GYUGYUT</a>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" /></svg>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/gyutaetaetae">linkedin.com/in/gyutaetaetae</a>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.56v4.92h-3.94v-11Z" /></svg>
+          </li>
         </ul>
       </header>
 
